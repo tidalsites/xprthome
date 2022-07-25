@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "s3-cleanup": "aws s3 rm s3://xprt-staging/static --recursive",
+    "deploy": "aws s3 sync build/ s3://xprt-staging"
   },
   "dependencies": {
     "react": "^18.2.0",
