@@ -23,7 +23,8 @@ This project is a simple website for a handyman service company located in Domin
 
 ## Color Palette
 
-- **Primary:** #b4a02b
-- **Black:** #333
-- **White:** #efefef
-- **Gray:** #a9a9a9
+- **Primary:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #b4a02b"></span><span>#b4a02b</span></div>
+- **Black:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #333"></span><span>#333</span></div>
+- **White:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #efefef"></span><span>#efefef</span></div>
+- **Gray:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #a9a9a9"></span><span>#a9a9a9</span></div>
+- **Red:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #da3721"></span><span>#da3721</span></div>

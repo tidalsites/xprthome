@@ -5,6 +5,7 @@ import { Header } from "../Header/Header";
 import { ContactBar } from "../ContactBar/ContactBar";
 import { Landing } from "../Landing/Landing";
 import { About } from "../About/About";
+import { Hours } from "../Hours/Hours";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Landing />
       <About />
+      <Hours />
     </div>
   );
 }

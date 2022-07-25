@@ -1,0 +1,46 @@
+@use "../../styles/Colors.scss" as c;
+
+.Hours {
+  background-color: c.$black;
+  color: c.$white;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50em;
+    margin-inline: auto;
+    padding-block: 2rem;
+  }
+
+  &__main {
+    width: 100%;
+
+    h2 {
+      margin: 1rem;
+      border-bottom: 2px solid c.$primary;
+      width: max-content;
+      margin-inline: auto;
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      max-width: 100%;
+    }
+
+    p {
+      background-color: c.$white;
+      color: c.$black;
+      text-align: center;
+      padding: 1rem 0.5rem;
+      font-size: 1.125rem;
+    }
+  }
+
+  &__secondary {
+    p {
+      margin-block: 1rem;
+      padding: 1rem 0.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}

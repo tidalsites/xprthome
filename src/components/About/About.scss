@@ -2,7 +2,7 @@
 
 .About {
   display: flex;
-  align-items: center;
+  height: max-content;
 
   &__text {
     flex-grow: 1;
@@ -10,10 +10,6 @@
     max-width: 70ch;
 
     h2 {
-      font-weight: 400;
-      border-bottom: 2px solid c.$primary;
-      line-height: 1.7;
-      width: max-content;
       padding-right: 1rem;
     }
 
@@ -27,18 +23,19 @@
   }
 
   &__img {
-    width: max-content;
-
+    transition: all 0.25s ease;
     img {
-      object-fit: fill;
+      object-fit: cover;
+      object-position: left;
       display: none;
+      max-width: 20em;
     }
 
-    // @media (min-width: 50em) {
-    //   img {
-    //     display: inline-flex;
-    //     max-width: 20em;
-    //   }
-    // }
+    @media (min-width: 50em) {
+      img {
+        display: block;
+        height: 100%;
+      }
+    }
   }
 }

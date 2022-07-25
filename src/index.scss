@@ -31,6 +31,13 @@ ul {
   list-style-type: none;
 }
 
+h2 {
+  font-weight: 400;
+  border-bottom: 2px solid c.$primary;
+  line-height: 1.7;
+  width: max-content;
+}
+
 // Utility classes
 
 .btn-primary {
