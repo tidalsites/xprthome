@@ -39,7 +39,7 @@ jobs:
         run: npm ci
       - name: Build
         run: CI= npm run build
-      - name: S3 Cleanup
-        run: npm run s3-cleanup
+      # - name: S3 Cleanup
+      #   run: npm run s3-cleanup
       - name: Deploy
         run: npm run deploy
