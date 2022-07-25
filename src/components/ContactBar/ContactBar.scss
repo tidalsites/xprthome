@@ -1,0 +1,14 @@
+@use "../../styles/Colors.scss" as c;
+
+.ContactBar {
+  background: c.$primary;
+  color: c.$white;
+  display: flex;
+  gap: 1rem;
+  padding: 0.25rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+}

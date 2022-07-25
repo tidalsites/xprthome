@@ -1,0 +1,43 @@
+@use "./styles/Colors.scss" as c;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: c.$black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+// Utility classes
+
+.btn-primary {
+  background: c.$primary;
+  color: c.$white;
+}
+
+.br-primary {
+  border-radius: 0.5rem;
+}

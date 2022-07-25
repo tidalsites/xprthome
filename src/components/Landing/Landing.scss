@@ -1,0 +1,76 @@
+@use "../../styles/Colors.scss" as c;
+
+.Landing {
+  display: flex;
+  background-image: url("../../assets/bg-villa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(c.$black, 0.5);
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-top: 5em;
+  padding-inline: 1rem;
+
+  &__headline {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(
+      115deg,
+      rgba(black, 0.5),
+      rgba(black, 0.2)
+    );
+    // border: 2px solid c.$white;
+    border-radius: 0.25rem;
+    padding: 2rem;
+    color: c.$white;
+    width: clamp(300px, 100%, 50em);
+    margin-inline: auto;
+    height: max-content;
+  }
+
+  &__text {
+    width: max-content;
+    max-width: 100%;
+    border-radius: 0.5rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      max-width: 20ch;
+      border-top-right-radius: 0.5rem;
+      border-top-left-radius: 0.5rem;
+    }
+
+    h1,
+    p {
+      padding: 1rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    gap: 0.75rem;
+    margin-block: 1rem;
+
+    > button {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      min-height: 25px;
+      font-size: 0.9rem;
+      border: 1px solid c.$white;
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        box-shadow: 1px 1px 4px black;
+        border: 2px solid c.$white;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use "../../styles/Colors.scss" as c;
+
+.Header {
+  $min-width: 30em;
+  display: block;
+  color: c.$white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  transition: background-color 350ms ease-in, color 350ms ease-in;
+
+  &-alt {
+    background: c.$white;
+    color: c.$black;
+
+    .Header__menu > button {
+      color: c.$black;
+    }
+  }
+
+  &__wrapper {
+    max-width: 50em;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid c.$gray;
+  }
+
+  &__logo-container {
+    padding: 0.25rem 1rem;
+
+    img {
+      width: 50px;
+      aspect-ratio: 1;
+    }
+  }
+
+  &__list {
+    display: none;
+    list-style-type: none;
+    gap: clamp(10px, 3vw, 1rem);
+    font-weight: 700;
+    padding-inline: 1rem;
+
+    @media (min-width: $min-width) {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    button {
+      border: 0;
+      border-radius: 0.25rem;
+      display: grid;
+      place-content: center;
+      padding: 0.25rem;
+      background-color: transparent;
+      color: c.$white;
+      aspect-ratio: 1;
+      min-width: 25px;
+    }
+
+    @media (min-width: $min-width) {
+      display: none;
+    }
+  }
+}
