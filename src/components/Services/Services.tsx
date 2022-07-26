@@ -12,7 +12,7 @@ import placeholder from "../../assets/tools-left.jpg";
 
 export const Services: FC = () => {
   return (
-    <div id="Services" className="Services">
+    <div id="Services" className="Services link-target">
       <div className="Service">
         <div className="Service__img">
           <img src={placeholder} alt="" />

@@ -1,0 +1,73 @@
+@use "../../styles/Colors.scss" as c;
+
+.Footer {
+  display: flex;
+  background: black;
+  color: c.$white;
+  width: 100vw;
+  border-top: 1rem double c.$white;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 50em;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-block: 2rem;
+
+    @media (min-width: 30em) {
+      flex-direction: row;
+    }
+
+    &__col {
+      display: flex;
+      flex-direction: column;
+
+      &-header {
+        font-weight: bold;
+        border-bottom: 1px solid c.$white;
+        margin-block: 1rem;
+        padding-block: 0.5rem;
+      }
+
+      &-contact {
+        display: flex;
+        gap: 0.5rem;
+
+        > div {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+
+      &-hours {
+        span:nth-last-child(1) {
+          padding-block: 0.5rem;
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-block: 0.25rem;
+    border-top: 1px solid c.$primary;
+  }
+}

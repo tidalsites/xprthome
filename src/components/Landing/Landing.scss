@@ -2,6 +2,7 @@
 
 .Landing {
   display: flex;
+  align-items: center;
   background-image: url("../../assets/bg-villa.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,6 +13,10 @@
   min-height: 100vh;
   padding-top: 5em;
   padding-inline: 1rem;
+
+  @media (min-width: 50em) {
+    align-items: unset;
+  }
 
   &__headline {
     display: flex;

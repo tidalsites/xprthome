@@ -7,6 +7,7 @@ import { Landing } from "../Landing/Landing";
 import { About } from "../About/About";
 import { Hours } from "../Hours/Hours";
 import { Services } from "../Services/Services";
+import { Footer } from "../Footer/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Hours />
       <Services />
+      <Footer />
     </div>
   );
 }

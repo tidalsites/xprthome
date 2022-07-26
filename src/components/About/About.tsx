@@ -4,7 +4,7 @@ import tools from "../../assets/tools-left.jpg";
 
 export const About: FC = () => {
   return (
-    <section id="About" className="About">
+    <section id="About" className="About link-target">
       <div className="About__img">
         <img src={tools} />
       </div>

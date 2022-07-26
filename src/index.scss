@@ -48,3 +48,17 @@ h2 {
 .br-primary {
   border-radius: 0.5rem;
 }
+
+// Link offset for sticky navbar
+// Will need to change if navbar height changes
+.link-target {
+  scroll-margin-top: 66px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
