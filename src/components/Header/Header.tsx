@@ -1,5 +1,6 @@
 import { FC, useState, useEffect } from "react";
 import "./Header.scss";
+import logoLight from "../../assets/logo-light.svg";
 import logo from "../../assets/logo.svg";
 
 import { MobileMenu } from "../MobileMenu/MobileMenu";
@@ -27,7 +28,7 @@ export const Header: FC = () => {
     <header className={`Header ${scrollY >= 30 ? "Header-alt" : ""}`}>
       <div className="Header__wrapper">
         <div className="Header__logo-container">
-          <img src={logo} alt="" />
+          <img src={scrollY >= 30 ? logo : logoLight} alt="" />
         </div>
         <nav id="primary_navigation">
           <ul className="Header__list">
@@ -35,7 +36,7 @@ export const Header: FC = () => {
               <a href="#">Home</a>
             </li>
             <li>
-              <a href="">Services</a>
+              <a href="#Services">Services</a>
             </li>
             <li>
               <a href="#About">About</a>

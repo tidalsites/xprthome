@@ -11,7 +11,10 @@ export const Landing: FC = () => {
         </div>
         <div className="Landing__cta">
           <button>Consigue un presupuesto</button>
-          <button className="btn-primary">LLama ahora</button>
+          <button className="btn-primary">
+            {/* <span className="material-icons">whatsapp</span> */}
+            <span>LLama ahora</span>
+          </button>
         </div>
       </div>
     </div>

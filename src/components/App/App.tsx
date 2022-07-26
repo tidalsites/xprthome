@@ -6,6 +6,7 @@ import { ContactBar } from "../ContactBar/ContactBar";
 import { Landing } from "../Landing/Landing";
 import { About } from "../About/About";
 import { Hours } from "../Hours/Hours";
+import { Services } from "../Services/Services";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Landing />
       <About />
       <Hours />
+      <Services />
     </div>
   );
 }
