@@ -36,10 +36,13 @@ export const Header: FC = () => {
               <a href="#">Home</a>
             </li>
             <li>
-              <a href="#Services">Services</a>
+              <a href="#About">About</a>
             </li>
             <li>
-              <a href="#About">About</a>
+              <a href="#Hours">Hours</a>
+            </li>
+            <li>
+              <a href="#Services">Services</a>
             </li>
             <li>
               <a href="">Contact</a>

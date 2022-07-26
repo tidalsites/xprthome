@@ -3,7 +3,7 @@ import "./Hours.scss";
 
 export const Hours: FC = () => {
   return (
-    <div className="Hours">
+    <div id="Hours" className="Hours">
       <div className="Hours__wrapper">
         <div className="Hours__main">
           <h2>Core Hours of Operation</h2>
