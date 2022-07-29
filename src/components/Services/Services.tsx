@@ -13,7 +13,7 @@ import placeholder from "../../assets/tools-left.jpg";
 export const Services: FC = () => {
   return (
     <div id="Services" className="Services link-target">
-      <div className="Service">
+      <div className="Service link-target" id="Electrical">
         <div className="Service__img">
           <img src={placeholder} alt="" />
         </div>
@@ -31,7 +31,7 @@ export const Services: FC = () => {
           </p>
         </div>
       </div>
-      <div className="Service">
+      <div className="Service link-target" id="Plumbing">
         <div className="Service__img">
           <img src={placeholder} alt="" />
         </div>
@@ -49,7 +49,7 @@ export const Services: FC = () => {
           </p>
         </div>
       </div>
-      <div className="Service">
+      <div className="Service link-target" id="General">
         <div className="Service__img">
           <img src={placeholder} alt="" />
         </div>
@@ -75,7 +75,7 @@ export const Services: FC = () => {
         </p>
         <button>Call Now</button>
       </div>
-      <div className="Service">
+      <div className="Service link-target" id="Welding">
         <div className="Service__img">
           <img src={placeholder} alt="" />
         </div>
@@ -93,7 +93,7 @@ export const Services: FC = () => {
           </p>
         </div>
       </div>
-      <div className="Service">
+      <div className="Service link-target" id="Auto">
         <div className="Service__img">
           <img src={placeholder} alt="" />
         </div>

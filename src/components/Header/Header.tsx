@@ -3,6 +3,8 @@ import "./Header.scss";
 import logoLight from "../../assets/logo-light.svg";
 import logo from "../../assets/logo.svg";
 import MenuIcon from "@mui/icons-material/Menu";
+import ArrowDownwardRoundedIcon from "@mui/icons-material/ArrowDownwardRounded";
+import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded";
 
 import { MobileMenu } from "../MobileMenu/MobileMenu";
 
@@ -42,8 +44,28 @@ export const Header: FC = () => {
             <li>
               <a href="#Hours">Hours</a>
             </li>
-            <li>
+            <li className="Header__list__dropdown">
               <a href="#Services">Services</a>
+              <ArrowDropDownRoundedIcon />
+              <div className="Header__list__dropdown__menu">
+                <ul>
+                  <li>
+                    <a href="#Electrical">Electrical</a>
+                  </li>
+                  <li>
+                    <a href="#Plumbing">Plumbing</a>
+                  </li>
+                  <li>
+                    <a href="#Welding">Welding</a>
+                  </li>
+                  <li>
+                    <a href="#General">General</a>
+                  </li>
+                  <li>
+                    <a href="#Auto">Auto</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
               <a href="#Footer">Contact</a>
