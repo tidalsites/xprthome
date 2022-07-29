@@ -7,32 +7,45 @@
   width: 100vw;
   height: 100vh;
   top: 0;
-  background: linear-gradient(rgba(c.$black, 0.9), rgba(c.$black, 0.5));
+  background: linear-gradient(rgba(c.$black, 0.9), rgba(c.$black, 0.8));
 
   &__wrapper {
     background: c.$white;
     width: clamp(300px, 100%, 20em);
-    margin-inline: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 30rem;
+    border: 2px solid c.$primary;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 4px 2px c.$black;
   }
 
   &__close {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0.25rem;
+    padding: 0.5rem;
+    padding-bottom: 0;
 
     > button {
       border: none;
+
+      > svg {
+        min-height: 25px;
+        min-width: 25px;
+      }
     }
   }
 
   nav {
     height: 100%;
     color: c.$black;
+    flex-grow: 1;
   }
 
   &__list {
-    padding-top: 2rem;
+    padding-block: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

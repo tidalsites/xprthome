@@ -60,10 +60,11 @@
       color: c.$white;
       aspect-ratio: 1;
       min-width: 35px;
+      padding-right: 0.5rem;
 
-      > span {
-        font-size: 2rem;
-        padding-inline: 1rem;
+      > svg {
+        min-height: 35px;
+        min-width: 35px;
       }
     }
 

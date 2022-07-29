@@ -40,6 +40,10 @@ h2 {
 
 // Utility classes
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .btn-primary {
   background: c.$primary;
   color: c.$white;

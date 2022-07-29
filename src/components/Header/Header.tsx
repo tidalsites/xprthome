@@ -1,7 +1,8 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect, useCallback } from "react";
 import "./Header.scss";
 import logoLight from "../../assets/logo-light.svg";
 import logo from "../../assets/logo.svg";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import { MobileMenu } from "../MobileMenu/MobileMenu";
 
@@ -45,13 +46,13 @@ export const Header: FC = () => {
               <a href="#Services">Services</a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="#Footer">Contact</a>
             </li>
           </ul>
         </nav>
         <div className="Header__menu">
           <button onClick={() => setMobileMenu(true)}>
-            <span className="material-icons">menu</span>
+            <MenuIcon />
           </button>
         </div>
       </div>

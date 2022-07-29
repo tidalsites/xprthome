@@ -1,19 +1,21 @@
 import { FC } from "react";
 import "./Footer.scss";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import EmailIcon from "@mui/icons-material/Email";
 
 export const Footer: FC = () => {
   return (
-    <footer className="Footer">
+    <footer id="Footer" className="Footer">
       <div className="Footer__wrapper">
         <div className="Footer__main">
           <div className="Footer__main__col Footer__main__col-contact">
             <span className="Footer__main__col-header">Contact</span>
             <div>
-              <span className="material-icons">phone</span>
+              <WhatsAppIcon />
               <span>18001234567</span>
             </div>
             <div>
-              <span className="material-icons">email</span>
+              <EmailIcon />
               <span>test@email.com</span>
             </div>
           </div>

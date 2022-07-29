@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "./Landing.scss";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export const Landing: FC = () => {
   return (
@@ -12,7 +13,7 @@ export const Landing: FC = () => {
         <div className="Landing__cta">
           <button>Consigue un presupuesto</button>
           <button className="btn-primary">
-            {/* <span className="material-icons">whatsapp</span> */}
+            <WhatsAppIcon />
             <span>LLama ahora</span>
           </button>
         </div>
