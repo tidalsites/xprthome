@@ -1,9 +1,8 @@
-import { FC, useState, useEffect, useCallback } from "react";
+import { FC, useState, useEffect } from "react";
 import "./Header.scss";
 import logoLight from "../../assets/logo-light.svg";
 import logo from "../../assets/logo.svg";
 import MenuIcon from "@mui/icons-material/Menu";
-import ArrowDownwardRoundedIcon from "@mui/icons-material/ArrowDownwardRounded";
 import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded";
 
 import { MobileMenu } from "../MobileMenu/MobileMenu";
