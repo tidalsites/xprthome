@@ -9,14 +9,14 @@ export const Footer: FC = () => {
       <div className="Footer__wrapper">
         <div className="Footer__main">
           <div className="Footer__main__col Footer__main__col-contact">
-            <span className="Footer__main__col-header">Contact</span>
+            <span className="Footer__main__col-header">Contacto</span>
             <div>
               <WhatsAppIcon />
-              <span>18001234567</span>
+              <span>+1 (809) 883-6636</span>
             </div>
             <div>
               <EmailIcon />
-              <span>test@email.com</span>
+              <span>emprendeconmigo.20@gmail.com</span>
             </div>
           </div>
           <div className="Footer__main__col">
@@ -25,47 +25,46 @@ export const Footer: FC = () => {
               <li>Bavaro</li>
               <li>Punta Cana</li>
               <li>La Romana</li>
-              <li>Santo Domingo</li>
-              <li>Other</li>
             </ul>
           </div>
           <div className="Footer__main__col Footer__main__col-hours">
             <span className="Footer__main__col-header">Core Working Hours</span>
             <ul>
               <li>
-                <span>Monday</span>
+                <span>Lunes</span>
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Tuesday</span>
+                <span>Martes</span>
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Wednesday</span>
+                <span>Miercoles</span>
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Thursday</span>
+                <span>Jueves</span>
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Friday</span>
+                <span>Viernes</span>
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Saturday</span>
-                <span>9AM - 12PM</span>
+                <span>Sabado</span>
+                <span>6AM -9PM</span>
               </li>
               <li>
-                <span>Sunday</span>
+                <span>Domingo</span>
                 <span>Closed</span>
               </li>
             </ul>
-            <span className="text-center">**All times are in EST**</span>
+            <span className="text-center">**Las horas estan en EST**</span>
           </div>
         </div>
         <div className="Footer__copyright">
           <span>&copy; XPRT Home 2022</span>
+          <a href="https://www.tidalsites.com"> Powered by TidalSites</a>
         </div>
       </div>
     </footer>

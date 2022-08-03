@@ -28,27 +28,27 @@ export const MobileMenu: FC<IMobileMenuProps> = ({ setMobileMenu }) => {
           <ul className="MobileMenu__list">
             <li>
               <a onClick={closeMenu} href="#">
-                Home
+                Inicio
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#About">
-                About
+                Nosotros
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#Hours">
-                Hours
+                Horas
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#Services">
-                Services
+                Servicios
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#Footer">
-                Contact
+                Contacto
               </a>
             </li>
           </ul>

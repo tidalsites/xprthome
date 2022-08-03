@@ -1,6 +1,9 @@
 import { FC } from "react";
 import "./Landing.scss";
+
+// Icons
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import EmailIcon from "@mui/icons-material/Email";
 
 export const Landing: FC = () => {
   return (
@@ -11,11 +14,14 @@ export const Landing: FC = () => {
           <p>Nosotros estamos ahí cuando llamas</p>
         </div>
         <div className="Landing__cta">
-          <button>Consigue un presupuesto</button>
-          <button className="btn-primary">
+          <a href="mailto:emprendeconmigo.20@gmail.com">
+            <EmailIcon />
+            <span>Email</span>
+          </a>
+          <a href="https://wa.me/18098836636" className="btn-primary">
             <WhatsAppIcon />
-            <span>LLama ahora</span>
-          </button>
+            <span>Contáctanos</span>
+          </a>
         </div>
       </div>
     </div>

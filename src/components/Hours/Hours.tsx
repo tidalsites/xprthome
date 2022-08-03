@@ -7,7 +7,7 @@ export const Hours: FC = () => {
       <div className="Hours__wrapper">
         <div className="Hours__main">
           <h2>Core Hours of Operation</h2>
-          <p>6am - 9pm EST</p>
+          <p>6AM - 9PM EST</p>
         </div>
         <div className="Hours__secondary">
           <p>

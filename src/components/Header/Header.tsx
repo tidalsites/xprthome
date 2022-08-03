@@ -35,39 +35,42 @@ export const Header: FC = () => {
         <nav id="primary_navigation">
           <ul className="Header__list">
             <li>
-              <a href="#">Home</a>
+              <a href="#">Inicio</a>
             </li>
             <li>
-              <a href="#About">About</a>
+              <a href="#About">Nosotros</a>
             </li>
             <li>
-              <a href="#Hours">Hours</a>
+              <a href="#Hours">Horas</a>
             </li>
             <li className="Header__list__dropdown">
-              <a href="#Services">Services</a>
+              <a href="#Services">Servicios</a>
               <ArrowDropDownRoundedIcon />
               <div className="Header__list__dropdown__menu">
                 <ul>
                   <li>
-                    <a href="#Electrical">Electrical</a>
+                    <a href="#Electrical">Electricidad</a>
                   </li>
                   <li>
-                    <a href="#Plumbing">Plumbing</a>
+                    <a href="#Plumbing">Plumeria</a>
                   </li>
                   <li>
-                    <a href="#Welding">Welding</a>
+                    <a href="#Welding">Herreria</a>
                   </li>
                   <li>
                     <a href="#General">General</a>
                   </li>
                   <li>
-                    <a href="#Auto">Auto</a>
+                    <a href="#AC">Aires Acondicionados</a>
+                  </li>
+                  <li>
+                    <a href="#Auto">Asistencia vial</a>
                   </li>
                 </ul>
               </div>
             </li>
             <li>
-              <a href="#Footer">Contact</a>
+              <a href="#Footer">Contacto</a>
             </li>
           </ul>
         </nav>

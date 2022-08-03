@@ -18,16 +18,20 @@
     padding-block: 2rem;
     background-color: c.$primary;
     color: white;
-    border-top: 2px solid c.$black;
-    border-bottom: 2px solid c.$black;
-    box-shadow: 0 0 2px 1px black;
+    border-top: 2px solid c.$white;
+    border-bottom: 2px solid c.$white;
+    outline: 2px solid c.$white;
+    outline-offset: -0.5rem;
+    z-index: 2;
+    margin-block: 0.5rem;
 
     > p {
       max-width: 50ch;
       text-align: center;
+      padding-inline: 1rem;
     }
 
-    > button {
+    > a {
       background-color: white;
       color: c.$black;
       width: max-content;
@@ -35,6 +39,16 @@
       border: none;
       border-radius: 0.25rem;
       font-size: 1rem;
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+      transition: all 250ms ease-in-out;
+
+      &:hover,
+      &:focus {
+        outline: 2px solid white;
+        outline-offset: 2px;
+      }
     }
   }
 }
@@ -47,24 +61,28 @@
   }
 
   &:nth-child(even) {
-    .Service__text {
+    .Service__text,
+    .Service__img {
       background-color: c.$black;
       color: c.$white;
     }
   }
 
   &__img {
+    display: flex;
+    width: max-content;
+
     img {
       object-fit: cover;
       object-position: left;
       display: none;
-      max-width: 20em;
-    }
+      margin: auto;
+      border: 5px solid c.$primary;
 
-    @media (min-width: 50em) {
-      img {
-        display: block;
-        height: 100%;
+      @media (min-width: 50em) {
+        display: flex;
+        max-height: 30em;
+        width: clamp(300px, 50vw, 35em);
       }
     }
   }
@@ -74,6 +92,7 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     p {
       padding-block: 1rem;

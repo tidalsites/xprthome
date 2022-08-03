@@ -10,7 +10,7 @@ export const About: FC = () => {
       </div>
 
       <div className="About__text">
-        <h2>About Us</h2>
+        <h2>Nosotros</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
           laudantium voluptas fugiat doloremque sed quo recusandae asperiores
