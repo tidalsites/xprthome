@@ -29,14 +29,11 @@ export const Header: FC = () => {
   return (
     <header className={`Header ${scrollY >= 30 ? "Header-alt" : ""}`}>
       <div className="Header__wrapper">
-        <div className="Header__logo-container">
+        <a href="#" className="Header__logo-container">
           <img src={scrollY >= 30 ? logo : logoLight} alt="" />
-        </div>
+        </a>
         <nav id="primary_navigation">
           <ul className="Header__list">
-            <li>
-              <a href="#">Inicio</a>
-            </li>
             <li>
               <a href="#About">Nosotros</a>
             </li>

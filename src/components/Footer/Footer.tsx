@@ -10,14 +10,14 @@ export const Footer: FC = () => {
         <div className="Footer__main">
           <div className="Footer__main__col Footer__main__col-contact">
             <span className="Footer__main__col-header">Contacto</span>
-            <div>
+            <a href="https://wa.me/18098836636">
               <WhatsAppIcon />
               <span>+1 (809) 883-6636</span>
-            </div>
-            <div>
+            </a>
+            <a href="mailto:emprendeconmigo.20@gmail.com">
               <EmailIcon />
               <span>emprendeconmigo.20@gmail.com</span>
-            </div>
+            </a>
           </div>
           <div className="Footer__main__col">
             <span className="Footer__main__col-header">Areas Covered</span>
