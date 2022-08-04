@@ -1,11 +1,20 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect, useContext } from "react";
 import "./Header.scss";
+
+// Images
 import logoLight from "../../assets/logo-light.svg";
 import logo from "../../assets/logo.svg";
+
+// Icons
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded";
 
+// Components
 import { MobileMenu } from "../MobileMenu/MobileMenu";
+
+// Files
+import { en } from "./Header.json";
+import { LangContext } from "../../state/context/Lang";
 
 export const Header: FC = () => {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
@@ -26,6 +35,35 @@ export const Header: FC = () => {
     };
   });
 
+  const { lang } = useContext(LangContext);
+
+  const renderByLang = (val: string): string => {
+    switch (val) {
+      case "nosotros":
+        return lang === "en" ? en.nosotros : "Nosotros";
+      case "horas":
+        return lang === "en" ? en.horas : "Horas";
+      case "servicios":
+        return lang === "en" ? en.servicios : "Servicios";
+      case "electricidad":
+        return lang === "en" ? en.electricidad : "Electricidad";
+      case "plumeria":
+        return lang === "en" ? en.plumeria : "Plumeria";
+      case "herreria":
+        return lang === "en" ? en.herreria : "Herreria";
+      case "aire":
+        return lang === "en" ? en.aire : "Aire";
+      case "general":
+        return lang === "en" ? en.general : "General";
+      case "asistenciaVial":
+        return lang === "en" ? en.asistenciaVial : "Assistencia Vial";
+      case "contacto":
+        return lang === "en" ? en.contacto : "Contacto";
+      default:
+        return "";
+    }
+  };
+
   return (
     <header className={`Header ${scrollY >= 30 ? "Header-alt" : ""}`}>
       <div className="Header__wrapper">
@@ -35,39 +73,43 @@ export const Header: FC = () => {
         <nav id="primary_navigation">
           <ul className="Header__list">
             <li>
-              <a href="#About">Nosotros</a>
+              <a href="#About">{(() => renderByLang("nosotros"))()}</a>
             </li>
             <li>
-              <a href="#Hours">Horas</a>
+              <a href="#Hours">{(() => renderByLang("horas"))()}</a>
             </li>
             <li className="Header__list__dropdown">
-              <a href="#Services">Servicios</a>
+              <a href="#Services">{(() => renderByLang("servicios"))()}</a>
               <ArrowDropDownRoundedIcon />
               <div className="Header__list__dropdown__menu">
                 <ul>
                   <li>
-                    <a href="#Electrical">Electricidad</a>
+                    <a href="#Electrical">
+                      {(() => renderByLang("electricidad"))()}
+                    </a>
                   </li>
                   <li>
-                    <a href="#Plumbing">Plumeria</a>
+                    <a href="#Plumbing">{(() => renderByLang("plumeria"))()}</a>
                   </li>
                   <li>
-                    <a href="#Welding">Herreria</a>
+                    <a href="#Welding">{(() => renderByLang("herreria"))()}</a>
                   </li>
                   <li>
-                    <a href="#General">General</a>
+                    <a href="#General">{(() => renderByLang("general"))()}</a>
                   </li>
                   <li>
-                    <a href="#AC">Aires Acondicionados</a>
+                    <a href="#AC">{(() => renderByLang("aire"))()}</a>
                   </li>
                   <li>
-                    <a href="#Auto">Asistencia vial</a>
+                    <a href="#Auto">
+                      {(() => renderByLang("asistenciaVial"))()}
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
             <li>
-              <a href="#Footer">Contacto</a>
+              <a href="#Footer">{(() => renderByLang("contacto"))()}</a>
             </li>
           </ul>
         </nav>

@@ -1,0 +1,64 @@
+@use "../../styles/Colors.scss" as c;
+
+.language-toggle {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  max-width: 50em;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-inline: 1rem;
+  color: c.$white;
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.25rem;
+
+    input[type="checkbox"] {
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked + .slider {
+        background-color: c.$primary;
+      }
+
+      &:focus + .slider {
+        box-shadow: 0 0 1px c.$primary;
+      }
+
+      &:checked + .slider:before {
+        -webkit-transform: translateX(1.25rem);
+        -ms-transform: translateX(1.25rem);
+        transform: translateX(1.25rem);
+      }
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background-color: c.$gray;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-radius: 20em;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 1.25rem;
+        aspect-ratio: 1;
+        background-color: c.$white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+    }
+  }
+}
