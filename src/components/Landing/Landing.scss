@@ -30,17 +30,15 @@
   }
 
   &__text {
-    width: max-content;
-    max-width: 100%;
-
     h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       max-width: 22ch;
       font-weight: 400;
       text-transform: uppercase;
 
       @media (min-width: 50em) {
         line-height: 1.7;
+        font-size: 2rem;
       }
     }
 
@@ -62,6 +60,7 @@
 
     > a {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       padding: 0.5rem 1rem;
       border-radius: 0.125rem;
@@ -73,6 +72,10 @@
       background: c.$white;
       color: c.$black;
 
+      > svg {
+        display: none;
+      }
+
       &:hover {
         box-shadow: 0 0 4px 2px black;
         outline: 2px solid c.$white;
@@ -81,6 +84,12 @@
 
       @media (min-width: 50em) {
         padding: 0.75rem 1.25rem;
+      }
+
+      @media (min-width: 25em) {
+        > svg {
+          display: block;
+        }
       }
     }
     .btn-primary {

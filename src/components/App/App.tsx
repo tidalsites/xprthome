@@ -16,27 +16,11 @@ import { LangReducer } from "../../state/reducer/Lang";
 
 function App() {
   const [lang, dispatchLang] = useReducer(LangReducer, "es");
-  const [checked, setChecked] = useState<boolean>(true);
 
-  useEffect(() => {
-    checked ? dispatchLang("es") : dispatchLang("en");
-  }, [checked]);
   return (
     <LangContext.Provider value={{ lang: lang, dispatchLang }}>
       <div className="App">
         {/* <ContactBar /> */}
-        <div className="language-toggle">
-          <span>EN</span>
-          <label className="switch">
-            <input
-              type="checkbox"
-              checked={checked}
-              onChange={() => setChecked(!checked)}
-            ></input>
-            <span className="slider"></span>
-          </label>
-          <span>ES</span>
-        </div>
         <Header />
         <Landing />
         <About />

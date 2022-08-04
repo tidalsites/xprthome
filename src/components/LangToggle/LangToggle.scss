@@ -1,0 +1,66 @@
+@use "../../styles/Colors.scss" as c;
+
+$height: 1rem;
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-inline: 1rem;
+  color: c.$white;
+  font-size: 0.75rem;
+  transition: background-color 350ms ease-in, color 350ms ease-in;
+
+  &-alt {
+    color: c.$black;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: calc($height * 2);
+    height: $height;
+
+    input[type="checkbox"] {
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked + .slider {
+        background-color: c.$primary;
+      }
+
+      &:focus + .slider {
+        box-shadow: 0 0 1px c.$primary;
+      }
+
+      &:checked + .slider:before {
+        -webkit-transform: translateX($height);
+        -ms-transform: translateX($height);
+        transform: translateX($height);
+      }
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background-color: c.$gray;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-radius: 20em;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: $height;
+        aspect-ratio: 1;
+        background-color: c.$white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+    }
+  }
+}

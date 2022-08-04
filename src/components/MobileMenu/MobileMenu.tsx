@@ -1,12 +1,16 @@
-import { Dispatch, FC, SetStateAction, useEffect } from "react";
+import { Dispatch, FC, SetStateAction, useContext, useEffect } from "react";
 import "./MobileMenu.scss";
 import CloseIcon from "@mui/icons-material/Close";
+import { LangToggle } from "../LangToggle/LangToggle";
+import { LangContext } from "../../state/context/Lang";
 
 interface IMobileMenuProps {
   setMobileMenu: Dispatch<SetStateAction<boolean>>;
 }
 
 export const MobileMenu: FC<IMobileMenuProps> = ({ setMobileMenu }) => {
+  const { lang } = useContext(LangContext);
+
   useEffect(() => {
     document.body.classList.add("no-scroll");
   }, []);
@@ -20,6 +24,7 @@ export const MobileMenu: FC<IMobileMenuProps> = ({ setMobileMenu }) => {
     <div className="MobileMenu">
       <div className="MobileMenu__wrapper">
         <div className="MobileMenu__close">
+          <LangToggle alt={true} />
           <button onClick={closeMenu}>
             <CloseIcon />
           </button>
@@ -28,27 +33,27 @@ export const MobileMenu: FC<IMobileMenuProps> = ({ setMobileMenu }) => {
           <ul className="MobileMenu__list">
             <li>
               <a onClick={closeMenu} href="#">
-                Inicio
+                {lang == "en" ? "Home" : "Inicio"}
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#About">
-                Nosotros
+                {lang == "en" ? "About" : "Nosotros"}
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#Hours">
-                Horas
+                {lang == "en" ? "Hours" : "Horas"}
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#Services">
-                Servicios
+                {lang == "en" ? "Services" : "Servicios"}
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#Footer">
-                Contacto
+                {lang == "en" ? "Contact" : "Contacto"}
               </a>
             </li>
           </ul>

@@ -6,6 +6,7 @@
   color: c.$white;
   width: 100vw;
   border-top: 1rem double c.$white;
+  font-size: 0.85rem;
 
   &__wrapper {
     width: 100%;
@@ -45,6 +46,7 @@
           display: flex;
           align-items: center;
           gap: 0.5rem;
+          word-break: break-word;
         }
       }
 
@@ -70,5 +72,9 @@
     padding-block: 0.25rem;
     border-top: 1px solid c.$primary;
     font-size: 0.75rem;
+  }
+
+  @media (min-width: 22em) {
+    font-size: 1rem;
   }
 }

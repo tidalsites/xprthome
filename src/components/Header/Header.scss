@@ -22,10 +22,34 @@
     max-width: 50em;
     margin-inline: auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__top {
+    display: none;
     align-items: center;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    padding-inline: 1rem;
+    padding-top: 0.25rem;
+
+    &__whatsapp {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    @media (min-width: 30em) {
+      display: flex;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid c.$gray;
-    position: relative;
   }
 
   &__logo-container {
