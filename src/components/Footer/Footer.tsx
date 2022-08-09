@@ -1,15 +1,19 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import "./Footer.scss";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
+import { LangContext } from "../../state/context/Lang";
 
 export const Footer: FC = () => {
+  const { lang } = useContext(LangContext);
   return (
     <footer id="Footer" className="Footer">
       <div className="Footer__wrapper">
         <div className="Footer__main">
           <div className="Footer__main__col Footer__main__col-contact">
-            <span className="Footer__main__col-header">Contacto</span>
+            <span className="Footer__main__col-header">
+              {lang == "en" ? "Contact" : "Contacto"}
+            </span>
             <a href="https://wa.me/18098836636">
               <WhatsAppIcon />
               <span>+1 (809) 883-6636</span>
@@ -20,15 +24,19 @@ export const Footer: FC = () => {
             </a>
           </div>
           <div className="Footer__main__col">
-            <span className="Footer__main__col-header">Areas Covered</span>
+            <span className="Footer__main__col-header">
+              {lang == "en" ? "Areas Covered" : "Zonas De Cobertura"}
+            </span>
             <ul>
-              <li>Bavaro</li>
+              <li>Bávaro</li>
               <li>Punta Cana</li>
               <li>La Romana</li>
             </ul>
           </div>
           <div className="Footer__main__col Footer__main__col-hours">
-            <span className="Footer__main__col-header">Core Working Hours</span>
+            <span className="Footer__main__col-header">
+              {lang == "en" ? "Core Working Hours" : "Nuestros Horarios"}
+            </span>
             <ul>
               <li>
                 <span>Lunes</span>
@@ -51,7 +59,7 @@ export const Footer: FC = () => {
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Sabado</span>
+                <span>Sábado</span>
                 <span>6AM -9PM</span>
               </li>
               <li>
@@ -64,7 +72,9 @@ export const Footer: FC = () => {
         </div>
         <div className="Footer__copyright">
           <span>&copy; XPRT Home 2022</span>
-          <a href="https://www.tidalsites.com"> Powered by TidalSites</a>
+          <a href="https://www.tidalsites.com">
+            {lang == "en" ? "Powered by TidalSites" : "Creado por TidalSites"}
+          </a>
         </div>
       </div>
     </footer>

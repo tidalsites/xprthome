@@ -1,8 +1,10 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import "./About.scss";
 import tools from "../../assets/tools-left.jpg";
+import { LangContext } from "../../state/context/Lang";
 
 export const About: FC = () => {
+  const { lang } = useContext(LangContext);
   return (
     <section id="About" className="About link-target">
       <div className="About__img">
@@ -10,18 +12,24 @@ export const About: FC = () => {
       </div>
 
       <div className="About__text">
-        <h2>Nosotros</h2>
+        <h2>{lang == "en" ? "About Us" : "Nosotros"}</h2>
+        <div className="About__vision">
+          <h3>{lang == "en" ? "Vision & Motion" : "Visión y Moción"}</h3>
+          <p>
+            {lang == "en"
+              ? "To be the reference company for all Maintenance, Repair and Improvement Services and Solutions for your home and vehicle."
+              : "Ser la empresa referente a todos Servicios y Soluciones de mantenimiento, reparación y mejora para su hogar y vehículo."}
+          </p>
+        </div>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
-          laudantium voluptas fugiat doloremque sed quo recusandae asperiores
-          optio quis itaque at hic et, saepe nam!
+          {lang == "en"
+            ? "Our goal is to provide home services performed by a team of technicians, engineers and professional craftsmen."
+            : "Nuestra meta es proveerles servicios a domicilios realizados por un equipo de técnicos, ingenieros y artesanales profesionales."}
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-          autem nam perferendis laudantium laborum excepturi labore! Molestiae
-          aliquam, reiciendis mollitia et vero nisi similique atque? Fuga,
-          praesentium saepe natus harum doloribus iure? Mollitia, cupiditate
-          numquam!
+          {lang == "en"
+            ? "It is not enough for us to provide good service. Our vision is to make the application process as easy as clicking a button. With ease, responsibility and a cooperative spirit we will become the best ally for each of our clients."
+            : "No nos basta con dar un buen servicio. Nuestra visión es hacer el proceso de solicitud tan fácil como darle a un botón. Con facilidad, responsabilidad y espíritu cooperativo nos convertiremos en el mejor aliado para cada uno de nuestros clientes."}
         </p>
       </div>
     </section>

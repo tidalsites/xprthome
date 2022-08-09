@@ -7,7 +7,7 @@
   &__text {
     flex-grow: 1;
     padding: 2rem;
-    max-width: 70ch;
+    margin-inline: auto;
 
     h2 {
       padding-right: 1rem;
@@ -15,15 +15,14 @@
 
     p {
       padding-block: 1rem;
-    }
-
-    @media (min-width: 50em) {
-      border-left: 2px solid c.$primary;
+      max-width: 70ch;
+      margin-inline: auto;
     }
   }
 
   &__img {
     transition: all 0.25s ease;
+
     img {
       object-fit: cover;
       object-position: left;
@@ -36,6 +35,24 @@
         display: block;
         height: 100%;
       }
+    }
+  }
+
+  &__vision {
+    text-align: center;
+    margin-block: 1rem;
+    padding: 1rem;
+    background-color: c.$white;
+    outline: 2px solid c.$primary;
+    outline-offset: -4px;
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-inline: auto;
+      max-width: 55ch;
     }
   }
 }

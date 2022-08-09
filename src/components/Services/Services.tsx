@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import "./Services.scss";
 
 // Icons
@@ -11,8 +11,10 @@ import general from "../../assets/general.jpg";
 import plumbing from "../../assets/plumbing.jpg";
 import electrical from "../../assets/electrical.jpg";
 import ac from "../../assets/ac.jpg";
+import { LangContext } from "../../state/context/Lang";
 
 export const Services: FC = () => {
+  const { lang } = useContext(LangContext);
   return (
     <div id="Services" className="Services link-target">
       <div className="Service link-target" id="Electrical">
@@ -61,7 +63,7 @@ export const Services: FC = () => {
           <img src={plumbing} alt="Nice Bathroom" />
         </div>
         <div className="Service__text">
-          <h2>Servicios de Plomería</h2>
+          <h2>{lang == "en" ? "Plumbing" : "Servicios de Plomería"}</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
             deserunt laboriosam minima odit possimus error omnis, doloremque et
@@ -106,13 +108,13 @@ export const Services: FC = () => {
       </div>
       <div className="Services__cta">
         <p>
-          ¿Necesita un servicio que no está en la lista? Llama ahora para saber
-          si podemos ayudarte. Nuestro personal tiene experiencia en muchas
-          áreas y estará encantado de ayudarle.
+          {lang == "en"
+            ? "Do you need a service that is not on the list? Call now to find out if we can help you. Our staff have experience in many areas and will be happy to help you."
+            : "¿Necesita un servicio que no está en la lista? Llama ahora para saber si podemos ayudarte. Nuestro personal tiene experiencia en muchas áreas y estará encantado de ayudarle."}
         </p>
         <a href="https://wa.me/18098836636">
           <WhatsAppIcon />
-          <span>Contáctanos</span>
+          <span>{lang == "en" ? "Contact Us" : "Contáctanos"}</span>
         </a>
       </div>
       <div className="Service link-target" id="Welding">
