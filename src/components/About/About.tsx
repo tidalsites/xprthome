@@ -1,6 +1,6 @@
 import { FC, useContext } from "react";
 import "./About.scss";
-import tools from "../../assets/tools-left.jpg";
+import tools from "../../assets/tools-left-min.jpg";
 import { LangContext } from "../../state/context/Lang";
 
 export const About: FC = () => {

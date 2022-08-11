@@ -5,12 +5,12 @@ import "./Services.scss";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 // Images
-import welding from "../../assets/welding.jpg";
-import auto from "../../assets/auto.jpg";
-import general from "../../assets/general.jpg";
-import plumbing from "../../assets/plumbing.jpg";
-import electrical from "../../assets/electrical.jpg";
-import ac from "../../assets/ac.jpg";
+import welding from "../../assets/welding-min.jpg";
+import auto from "../../assets/auto-min.jpg";
+import general from "../../assets/general-min.jpg";
+import plumbing from "../../assets/plumbing-min.jpg";
+import electrical from "../../assets/electrical-min.jpg";
+import ac from "../../assets/ac-min.jpg";
 import { LangContext } from "../../state/context/Lang";
 
 export const Services: FC = () => {
