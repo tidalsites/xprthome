@@ -19,11 +19,8 @@
     padding-block: 2rem;
     background-color: c.$primary;
     color: white;
-    border-top: 2px solid c.$white;
-    border-bottom: 2px solid c.$white;
     outline: 2px solid c.$white;
     outline-offset: -0.5rem;
-    margin-block: 0.25rem;
 
     > p {
       max-width: 50ch;
@@ -74,32 +71,38 @@
 
     img {
       object-fit: cover;
-      object-position: left;
+      object-position: center;
       display: none;
       margin: auto;
-      border: 5px solid c.$primary;
 
       @media (min-width: 50em) {
         display: flex;
-        max-height: 30em;
         width: clamp(300px, 50vw, 35em);
+        height: 40em;
       }
+    }
+
+    @media (min-width: 50em) {
+      height: 40em;
     }
   }
 
   &__text {
     padding: 2rem 1rem;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-    p {
-      padding-block: 1rem;
-    }
-
-    > * {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       max-width: 70ch;
+      margin-inline: auto;
+      padding-block: auto;
+      height: 100%;
+
+      p {
+        padding-block: 1rem;
+      }
     }
   }
 }

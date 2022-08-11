@@ -7,7 +7,9 @@
   width: 100vw;
   height: 100vh;
   top: 0;
-  background: linear-gradient(rgba(c.$black, 0.9), rgba(c.$black, 0.8));
+  background-color: rgba(c.$black, 0.9);
+  opacity: 0;
+  animation: fadeIn 250ms forwards;
 
   &__wrapper {
     background: c.$white;
@@ -19,6 +21,8 @@
     border: 2px solid c.$primary;
     border-radius: 0.25rem;
     box-shadow: 0 0 4px 2px c.$black;
+    transform: translateY(-100vh);
+    animation: slideDown 550ms forwards;
   }
 
   &__close {
@@ -69,5 +73,17 @@
       color: c.$white;
       padding: 1rem;
     }
+  }
+}
+
+@keyframes slideDown {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
   }
 }

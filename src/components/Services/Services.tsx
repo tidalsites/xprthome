@@ -25,37 +25,25 @@ export const Services: FC = () => {
           />
         </div>
         <div className="Service__text">
-          <h2>Electricidad</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            deserunt laboriosam minima odit possimus error omnis, doloremque et
-            ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-            facilis placeat veniam ratione facere.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil esse
-            nostrum maxime natus, pariatur quod?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            deserunt laboriosam minima odit possimus error omnis, doloremque et
-            ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-            facilis placeat veniam ratione facere.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil esse
-            nostrum maxime natus, pariatur quod?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            deserunt laboriosam minima odit possimus error omnis, doloremque et
-            ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-            facilis placeat veniam ratione facere.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil esse
-            nostrum maxime natus, pariatur quod?
-          </p>
+          <div className="Service__text__wrapper">
+            <h2>Electricidad</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+              deserunt laboriosam minima odit possimus error omnis, doloremque
+              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
+              facilis placeat veniam ratione facere.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              esse nostrum maxime natus, pariatur quod?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+              deserunt laboriosam minima odit possimus error omnis, doloremque
+              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
+              facilis placeat veniam ratione facere.
+            </p>
+          </div>
         </div>
       </div>
       <div className="Service link-target" id="Plumbing">
@@ -63,29 +51,25 @@ export const Services: FC = () => {
           <img src={plumbing} alt="Nice Bathroom" />
         </div>
         <div className="Service__text">
-          <h2>{lang == "en" ? "Plumbing" : "Servicios de Plomería"}</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            deserunt laboriosam minima odit possimus error omnis, doloremque et
-            ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-            facilis placeat veniam ratione facere.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil esse
-            nostrum maxime natus, pariatur quod?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            deserunt laboriosam minima odit possimus error omnis, doloremque et
-            ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-            facilis placeat veniam ratione facere.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            deserunt laboriosam minima odit possimus error omnis, doloremque et
-            ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-            facilis placeat veniam ratione facere.
-          </p>
+          <div className="Service__text__wrapper">
+            <h2>{lang == "en" ? "Plumbing" : "Servicios de Plomería"}</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+              deserunt laboriosam minima odit possimus error omnis, doloremque
+              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
+              facilis placeat veniam ratione facere.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              esse nostrum maxime natus, pariatur quod?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+              deserunt laboriosam minima odit possimus error omnis, doloremque
+              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
+              facilis placeat veniam ratione facere.
+            </p>
+          </div>
         </div>
       </div>
       <div className="Service link-target" id="General">
@@ -93,17 +77,19 @@ export const Services: FC = () => {
           <img src={general} alt="Man drilling a piece of wood" />
         </div>
         <div className="Service__text">
-          <h2>Servicios Generales</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            deserunt laboriosam minima odit possimus error omnis, doloremque et
-            ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-            facilis placeat veniam ratione facere.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil esse
-            nostrum maxime natus, pariatur quod?
-          </p>
+          <div className="Service__text__wrapper">
+            <h2>Servicios Generales</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+              deserunt laboriosam minima odit possimus error omnis, doloremque
+              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
+              facilis placeat veniam ratione facere.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              esse nostrum maxime natus, pariatur quod?
+            </p>
+          </div>
         </div>
       </div>
       <div className="Services__cta">
@@ -122,17 +108,19 @@ export const Services: FC = () => {
           <img src={welding} alt="Man welding with sparks" />
         </div>
         <div className="Service__text">
-          <h2>Servicios de Herrería</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            deserunt laboriosam minima odit possimus error omnis, doloremque et
-            ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-            facilis placeat veniam ratione facere.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil esse
-            nostrum maxime natus, pariatur quod?
-          </p>
+          <div className="Service__text__wrapper">
+            <h2>Servicios de Herrería</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+              deserunt laboriosam minima odit possimus error omnis, doloremque
+              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
+              facilis placeat veniam ratione facere.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              esse nostrum maxime natus, pariatur quod?
+            </p>
+          </div>
         </div>
       </div>
       <div className="Service link-target" id="AC">
@@ -140,17 +128,19 @@ export const Services: FC = () => {
           <img src={ac} alt="Man fixing AC unit" />
         </div>
         <div className="Service__text">
-          <h2>Aires Acondicionados</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            deserunt laboriosam minima odit possimus error omnis, doloremque et
-            ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-            facilis placeat veniam ratione facere.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil esse
-            nostrum maxime natus, pariatur quod?
-          </p>
+          <div className="Service__text__wrapper">
+            <h2>Aires Acondicionados</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+              deserunt laboriosam minima odit possimus error omnis, doloremque
+              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
+              facilis placeat veniam ratione facere.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              esse nostrum maxime natus, pariatur quod?
+            </p>
+          </div>
         </div>
       </div>
       <div className="Service link-target" id="Auto">
@@ -158,17 +148,19 @@ export const Services: FC = () => {
           <img src={auto} alt="Man tuning car engine" />
         </div>
         <div className="Service__text">
-          <h2>Asistencia vial</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-            deserunt laboriosam minima odit possimus error omnis, doloremque et
-            ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-            facilis placeat veniam ratione facere.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil esse
-            nostrum maxime natus, pariatur quod?
-          </p>
+          <div className="Service__text__wrapper">
+            <h2>Asistencia vial</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+              deserunt laboriosam minima odit possimus error omnis, doloremque
+              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
+              facilis placeat veniam ratione facere.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              esse nostrum maxime natus, pariatur quod?
+            </p>
+          </div>
         </div>
       </div>
     </div>
