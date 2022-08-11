@@ -2,6 +2,10 @@ import { FC, useState, useEffect, useContext } from "react";
 import { LangContext } from "../../state/context/Lang";
 import "./LangToggle.scss";
 
+// Icons
+import ToggleOnIcon from "@mui/icons-material/ToggleOn";
+import ToggleOffIcon from "@mui/icons-material/ToggleOff";
+
 interface ILangToggleProps {
   alt: boolean;
 }
@@ -21,14 +25,12 @@ export const LangToggle: FC<ILangToggleProps> = ({ alt }) => {
       }
     >
       <span>EN</span>
-      <label className="switch">
-        <input
-          type="checkbox"
-          checked={checked}
-          onChange={() => setChecked(!checked)}
-        ></input>
-        <span className="slider"></span>
-      </label>
+      <button
+        className="language-toggle__btn"
+        onClick={() => setChecked(!checked)}
+      >
+        {checked ? <ToggleOnIcon /> : <ToggleOffIcon />}
+      </button>
       <span>ES</span>
     </div>
   );
