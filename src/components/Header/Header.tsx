@@ -77,8 +77,8 @@ export const Header: FC = () => {
           </a>
         </div>
         <div className="Header__main">
-          <a href="#" className="Header__logo-container">
-            <img src={scrollY >= 30 ? logo : logoLight} alt="" />
+          <a href="#" className="Header__logo-container" aria-label="Home">
+            <img src={scrollY >= 30 ? logo : logoLight} alt="XPRT Home" />
           </a>
           <nav id="primary_navigation">
             <ul className="Header__list">

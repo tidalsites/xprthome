@@ -8,7 +8,10 @@ export const About: FC = () => {
   return (
     <section id="About" className="About link-target">
       <div className="About__img">
-        <img src={tools} />
+        <img
+          src={tools}
+          alt="Golden wrenches, bolts, and washers on black background"
+        />
       </div>
 
       <div className="About__text">

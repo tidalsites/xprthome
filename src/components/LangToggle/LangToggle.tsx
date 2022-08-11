@@ -28,6 +28,7 @@ export const LangToggle: FC<ILangToggleProps> = ({ alt }) => {
       <button
         className="language-toggle__btn"
         onClick={() => setChecked(!checked)}
+        aria-label="Language Toggle"
       >
         {checked ? <ToggleOnIcon /> : <ToggleOffIcon />}
       </button>
