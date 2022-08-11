@@ -24,7 +24,7 @@ export const Landing: FC = () => {
           </p>
         </div>
         <div className="Landing__cta">
-          <a href="mailto:emprendeconmigo.20@gmail.com">
+          <a href="mailto:info@xprthome.com">
             <EmailIcon />
             <span>Email</span>
           </a>

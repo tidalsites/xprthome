@@ -18,9 +18,9 @@ export const Footer: FC = () => {
               <WhatsAppIcon />
               <span>+1 (809) 883-6636</span>
             </a>
-            <a href="mailto:emprendeconmigo.20@gmail.com">
+            <a href="mailto:info@xprthome.com">
               <EmailIcon />
-              <span>emprendeconmigo.20@gmail.com</span>
+              <span>info@xprthome.com</span>
             </a>
           </div>
           <div className="Footer__main__col">
