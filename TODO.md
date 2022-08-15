@@ -1,18 +1,18 @@
 # TODO list
 
-- [ ] Polish logo
+- [x] Polish logo
 - [ ] Heading copy
-- [ ] About copy
+- [x] About copy
 - [ ] Services copy
 - [ ] Footer copy
 - [x] Re-style Mobile menu
 - [x] Footer
 - [ ] Translation
-- [ ] Whatsapp integration
+- [x] Whatsapp integration
 - [x] Switch from MUI CDN to library
-- [ ] Add service sub-menu to navbar
+- [x] Add service sub-menu to navbar
 - [ ] Modify service section photos
-- [ ] Optimize photos
-- [ ] Update CTA section
-- [ ] Setup PWA
-- [ ] Update contact info
+- [x] Optimize photos
+- [x] Update CTA section
+- [x] Setup PWA
+- [x] Update contact info

@@ -93,6 +93,12 @@ export const Services: FC = () => {
         </div>
       </div>
       <div className="Services__cta">
+        <div className="Services__cta__icons">
+          <span className="material-icons">plumbing</span>
+          <span className="material-icons">carpenter</span>
+          <span className="material-icons">handyman</span>
+          <span className="material-icons">roofing</span>
+        </div>
         <p>
           {lang == "en"
             ? "Do you need a service that is not on the list? Call now to find out if we can help you. Our staff have experience in many areas and will be happy to help you."

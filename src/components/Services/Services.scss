@@ -16,14 +16,44 @@
     align-items: center;
     gap: 1rem;
     font-size: 1.25rem;
-    padding-block: 2rem;
+    padding: 2rem 0.5rem;
     background-color: c.$primary;
     color: white;
     outline: 2px solid c.$white;
     outline-offset: -0.5rem;
 
-    > p {
+    &__icons {
+      width: 100%;
       max-width: 50ch;
+      padding: 0.5rem 3rem;
+      margin-inline: auto;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      background-color: c.$primary;
+      isolation: isolate;
+      z-index: 1;
+
+      > span {
+        background-color: c.$primary;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        border-top: 2px solid white;
+        left: 0;
+        right: 0;
+        z-index: -1;
+      }
+    }
+
+    > p {
+      max-width: 55ch;
       text-align: center;
       padding-inline: 1rem;
     }
@@ -33,6 +63,7 @@
       color: c.$black;
       width: max-content;
       padding: 0.5rem 1.25rem;
+      margin-top: 1rem;
       border: none;
       border-radius: 0.25rem;
       font-size: 1rem;
@@ -40,10 +71,10 @@
       gap: 0.25rem;
       align-items: center;
       transition: all 250ms ease-in-out;
+      outline: 2px solid white;
 
       &:hover,
       &:focus {
-        outline: 2px solid white;
         outline-offset: 2px;
       }
     }

@@ -14,7 +14,6 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { MobileMenu } from "../MobileMenu/MobileMenu";
 
 // Files
-import { en } from "./Header.json";
 import { LangContext } from "../../state/context/Lang";
 import { LangToggle } from "../LangToggle/LangToggle";
 
@@ -39,33 +38,6 @@ export const Header: FC = () => {
 
   const { lang } = useContext(LangContext);
 
-  const renderByLang = (val: string): string => {
-    switch (val) {
-      case "nosotros":
-        return lang === "en" ? en.nosotros : "Nosotros";
-      case "horas":
-        return lang === "en" ? en.horas : "Horas";
-      case "servicios":
-        return lang === "en" ? en.servicios : "Servicios";
-      case "electricidad":
-        return lang === "en" ? en.electricidad : "Electricidad";
-      case "plumeria":
-        return lang === "en" ? en.plumeria : "Plumeria";
-      case "herreria":
-        return lang === "en" ? en.herreria : "Herreria";
-      case "aire":
-        return lang === "en" ? en.aire : "Aire";
-      case "general":
-        return lang === "en" ? en.general : "General";
-      case "asistenciaVial":
-        return lang === "en" ? en.asistenciaVial : "Assistencia Vial";
-      case "contacto":
-        return lang === "en" ? en.contacto : "Contacto";
-      default:
-        return "";
-    }
-  };
-
   return (
     <header className={`Header ${scrollY >= 30 ? "Header-alt" : ""}`}>
       <div className="Header__wrapper">
@@ -83,48 +55,56 @@ export const Header: FC = () => {
           <nav id="primary_navigation">
             <ul className="Header__list">
               <li>
-                <a href="#About">{(() => renderByLang("nosotros"))()}</a>
+                <a href="#About">{lang === "en" ? "About Us" : "Nosotros"}</a>
               </li>
               <li>
-                <a href="#Hours">{(() => renderByLang("horas"))()}</a>
+                <a href="#Hours">{lang === "en" ? "Hours" : "Horas"}</a>
               </li>
               <li className="Header__list__dropdown">
-                <a href="#Services">{(() => renderByLang("servicios"))()}</a>
+                <a href="#Services">
+                  {lang === "en" ? "Services" : "Servicios"}
+                </a>
                 <ArrowDropDownRoundedIcon />
                 <div className="Header__list__dropdown__menu">
                   <div className="Header__list__dropdown__menu__top"></div>
                   <ul>
                     <li>
                       <a href="#Electrical">
-                        {(() => renderByLang("electricidad"))()}
+                        {lang === "en" ? "Electrical" : "Electricidad"}
                       </a>
                     </li>
                     <li>
                       <a href="#Plumbing">
-                        {(() => renderByLang("plumeria"))()}
+                        {lang === "en" ? "Plumbing" : "Plumeria"}
                       </a>
                     </li>
                     <li>
                       <a href="#Welding">
-                        {(() => renderByLang("herreria"))()}
+                        {lang === "en" ? "Welding" : "Herreria"}
                       </a>
                     </li>
                     <li>
-                      <a href="#General">{(() => renderByLang("general"))()}</a>
+                      <a href="#General">
+                        {lang === "en" ? "General" : "General"}
+                      </a>
                     </li>
                     <li>
-                      <a href="#AC">{(() => renderByLang("aire"))()}</a>
+                      <a href="#AC">
+                        {lang === "en" ? "Air Conditioning" : "Aire"}
+                      </a>
                     </li>
                     <li>
                       <a href="#Auto">
-                        {(() => renderByLang("asistenciaVial"))()}
+                        {lang === "en"
+                          ? "Roadside Assistance"
+                          : "Assistencia Vial"}
                       </a>
                     </li>
                   </ul>
                 </div>
               </li>
               <li>
-                <a href="#Footer">{(() => renderByLang("contacto"))()}</a>
+                <a href="#Footer">{lang === "en" ? "Contact" : "Contacto"}</a>
               </li>
             </ul>
           </nav>
