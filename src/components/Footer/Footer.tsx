@@ -12,7 +12,7 @@ export const Footer: FC = () => {
         <div className="Footer__main">
           <div className="Footer__main__col Footer__main__col-contact">
             <span className="Footer__main__col-header">
-              {lang == "en" ? "Contact" : "Contacto"}
+              {lang == "es" ? "Contacto" : "Contact"}
             </span>
             <a href="https://wa.me/18098836636">
               <WhatsAppIcon />
@@ -25,7 +25,7 @@ export const Footer: FC = () => {
           </div>
           <div className="Footer__main__col">
             <span className="Footer__main__col-header">
-              {lang == "en" ? "Areas Covered" : "Zonas De Cobertura"}
+              {lang === "es" ? "Zonas De Cobertura" : "Areas Covered"}
             </span>
             <ul>
               <li>Bávaro</li>
@@ -35,45 +35,44 @@ export const Footer: FC = () => {
           </div>
           <div className="Footer__main__col Footer__main__col-hours">
             <span className="Footer__main__col-header">
-              {lang == "en" ? "Core Working Hours" : "Nuestros Horarios"}
+              {lang == "es" ? "Nuestros Horarios" : "Core Working Hours"}
             </span>
             <ul>
               <li>
-                <span>Lunes</span>
+                <span>{lang === "es" ? "Lunes" : "Monday"}</span>
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Martes</span>
+                <span>{lang === "es" ? "Martes" : "Tuesday"}</span>
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Miercoles</span>
+                <span>{lang === "es" ? "Miércoles" : "Wednesday"}</span>
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Jueves</span>
+                <span>{lang === "es" ? "Jueves" : "Thursday"}</span>
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Viernes</span>
+                <span>{lang === "es" ? "Viernes" : "Friday"}</span>
                 <span>6AM - 9PM</span>
               </li>
               <li>
-                <span>Sábado</span>
+                <span>{lang === "es" ? "Sábado" : "Saturday"}</span>
                 <span>6AM -9PM</span>
               </li>
               <li>
-                <span>Domingo</span>
-                <span>Closed</span>
+                <span>{lang === "es" ? "Domingo" : "Sunday"}</span>
+                <span>{lang === "es" ? "Cerrado" : "Closed"}</span>
               </li>
             </ul>
-            <span className="text-center">**Las horas estan en EST**</span>
           </div>
         </div>
         <div className="Footer__copyright">
           <span>&copy; XPRT Home 2022</span>
           <a href="https://www.tidalsites.com">
-            {lang == "en" ? "Powered by TidalSites" : "Creado por TidalSites"}
+            {lang == "es" ? "Creado por TidalSites" : "Powered by TidalSites"}
           </a>
         </div>
       </div>

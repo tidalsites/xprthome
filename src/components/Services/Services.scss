@@ -128,11 +128,33 @@
       justify-content: center;
       max-width: 70ch;
       margin-inline: auto;
-      padding-block: auto;
       height: 100%;
 
       p {
         padding-block: 1rem;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-left: 1rem;
+        margin-block: 2rem;
+
+        li {
+          list-style-type: disc;
+          margin-left: 0.5rem;
+          // TODO - Get to work with custom icon
+          // list-style-image: url(../../assets/electric-icon.svg);
+        }
+
+        li::marker {
+          color: c.$primary;
+          font-size: 2rem;
+          display: flex;
+          align-items: center;
+          height: 100%;
+        }
       }
     }
   }

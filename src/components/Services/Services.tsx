@@ -26,23 +26,31 @@ export const Services: FC = () => {
         </div>
         <div className="Service__text">
           <div className="Service__text__wrapper">
-            <h2>Electricidad</h2>
+            <h2>{lang === "es" ? "Electricidad" : "Electrical"}</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-              deserunt laboriosam minima odit possimus error omnis, doloremque
-              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-              facilis placeat veniam ratione facere.
+              {lang === "es"
+                ? "Solucionamos cualquier problema electrico, desde cambiar una tapa de tomacorriente hasta cablear y restructurar su vivienda."
+                : "We solve any electrical problem, from changing an outlet cover to wiring and restructuring your home."}
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              esse nostrum maxime natus, pariatur quod?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-              deserunt laboriosam minima odit possimus error omnis, doloremque
-              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-              facilis placeat veniam ratione facere.
-            </p>
+            <ul>
+              <li>
+                {lang === "es"
+                  ? "Cambios de accesorios electricos"
+                  : "Changes of electrical accessories"}
+              </li>
+              <li>{lang === "es" ? "Cambios de lamparas" : "Lamp changes"}</li>
+              <li>{lang === "es" ? "Cambios de braker" : "Breaker changes"}</li>
+              <li>
+                {lang === "es"
+                  ? "Chequeos y regular consumo excesivo de luz"
+                  : "Check-ups and regular excessive consumption of light"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Instalaciones electricas nuevas"
+                  : "New electrical installations"}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -52,23 +60,34 @@ export const Services: FC = () => {
         </div>
         <div className="Service__text">
           <div className="Service__text__wrapper">
-            <h2>{lang == "en" ? "Plumbing" : "Servicios de Plomería"}</h2>
+            <h2>{lang == "es" ? "Servicios de Plomería" : "Plumbing"}</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-              deserunt laboriosam minima odit possimus error omnis, doloremque
-              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-              facilis placeat veniam ratione facere.
+              {lang === "es"
+                ? "Puede contar con nosotros para solucionar todo temas de plomería desde una fuga de agua hasta cualquier instalación nueva."
+                : "You can count on us to fix everything from a water leak to any new plumbing installation."}
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              esse nostrum maxime natus, pariatur quod?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-              deserunt laboriosam minima odit possimus error omnis, doloremque
-              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-              facilis placeat veniam ratione facere.
-            </p>
+            <ul>
+              <li>
+                {lang === "es"
+                  ? "Cambio de accesorios de baños"
+                  : "Change of bathroom accessories"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Reparaciones de fugas de agua"
+                  : "Water leak repairs"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Reparaciones o cambio de inodoros cambio de lava mano soluciones de tubería tapada"
+                  : "Repairs or change of toilets change of handwashing solutions of clogged pipes"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Soluciones de tubería tapada"
+                  : "Solutions of clogged pipes"}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -100,13 +119,13 @@ export const Services: FC = () => {
           <span className="material-icons">roofing</span>
         </div>
         <p>
-          {lang == "en"
-            ? "Do you need a service that is not on the list? Call now to find out if we can help you. Our staff have experience in many areas and will be happy to help you."
-            : "¿Necesita un servicio que no está en la lista? Llama ahora para saber si podemos ayudarte. Nuestro personal tiene experiencia en muchas áreas y estará encantado de ayudarle."}
+          {lang == "es"
+            ? "¿Necesita un servicio que no está en la lista? Llama ahora para saber si podemos ayudarte. Nuestro personal tiene experiencia en muchas áreas y estará encantado de ayudarle."
+            : "Do you need a service that is not on the list? Call now to find out if we can help you. Our staff have experience in many areas and will be happy to help you."}
         </p>
         <a href="https://wa.me/18098836636">
           <WhatsAppIcon />
-          <span>{lang == "en" ? "Contact Us" : "Contáctanos"}</span>
+          <span>{lang == "es" ? "Contáctanos" : "Contact Us"}</span>
         </a>
       </div>
       <div className="Service link-target" id="Welding">
@@ -115,17 +134,31 @@ export const Services: FC = () => {
         </div>
         <div className="Service__text">
           <div className="Service__text__wrapper">
-            <h2>Servicios de Herrería</h2>
+            <h2>{lang === "es" ? "Servicios de Herrería" : "Welding"}</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-              deserunt laboriosam minima odit possimus error omnis, doloremque
-              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-              facilis placeat veniam ratione facere.
+              {lang === "es"
+                ? "Realizamos todo tipos de trabajos de soldadura reparación de todo tipo de estructura metálica."
+                : "We carry out all types of welding repair work on all types of metal structures."}
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              esse nostrum maxime natus, pariatur quod?
-            </p>
+            <ul>
+              <li>
+                {lang === "es"
+                  ? "Fabricamos puertas de hierros"
+                  : "We manufacture iron gates"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Fabricación de protector de ventanas"
+                  : "Manufacture of window guard"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Fabricación de portones"
+                  : "Manufacture of gates"}
+              </li>
+              <li>{lang === "es" ? "Verjas de hierro" : "Iron gates"}</li>
+              <li>{lang === "es" ? "Escaleras en hierro" : "Iron stairs"}</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -135,17 +168,31 @@ export const Services: FC = () => {
         </div>
         <div className="Service__text">
           <div className="Service__text__wrapper">
-            <h2>Aires Acondicionados</h2>
+            <h2>
+              {lang === "es" ? "Aires Acondicionados" : "Air Conditioning"}
+            </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-              deserunt laboriosam minima odit possimus error omnis, doloremque
-              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-              facilis placeat veniam ratione facere.
+              {lang === "es"
+                ? "Nos encargamos de dejar tu espacio frio"
+                : "We take care of leaving your cold space"}
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              esse nostrum maxime natus, pariatur quod?
-            </p>
+            <ul>
+              <li>
+                {lang === "es"
+                  ? "Reparamos aire acondicionados"
+                  : "We repair air conditioners"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Vendemos e instalamos aire acondicionados"
+                  : "We sell and install air conditioners"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Mantenimiento de aire acondicionado"
+                  : "Air conditioning maintenance"}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -155,7 +202,7 @@ export const Services: FC = () => {
         </div>
         <div className="Service__text">
           <div className="Service__text__wrapper">
-            <h2>Asistencia vial</h2>
+            <h2>{lang === "es" ? "Asistencia vial" : "Roadside Assistance"}</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
               deserunt laboriosam minima odit possimus error omnis, doloremque

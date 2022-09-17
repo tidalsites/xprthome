@@ -13,14 +13,10 @@ export const Landing: FC = () => {
       <div className="Landing__headline">
         <div className="Landing__text">
           <h1>
-            {lang == "en"
-              ? "Handyman Services in Punta Cana"
-              : "Servicios de personal de mantenimiento en Punta Cana"}
+            {lang == "en" ? "Handyman Services" : "Servicios de mantenimiento"}
           </h1>
           <p>
-            {lang == "en"
-              ? "We are there when you call"
-              : "Nosotros estamos ahí cuando llamas"}
+            {lang == "en" ? "An expert in your home" : "Un experto en su casa"}
           </p>
         </div>
         <div className="Landing__cta">

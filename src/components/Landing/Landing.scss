@@ -14,10 +14,6 @@
   padding-top: 5em;
   padding-inline: 1rem;
 
-  @media (min-width: 50em) {
-    align-items: unset;
-  }
-
   &__headline {
     display: flex;
     flex-direction: column;
@@ -25,31 +21,34 @@
     padding: 2rem;
     color: c.$white;
     width: clamp(300px, 100%, 50em);
+    width: fit-content;
     margin-inline: auto;
     height: max-content;
   }
 
   &__text {
     h1 {
-      font-size: 1.5rem;
-      max-width: 22ch;
-      font-weight: 400;
+      font-size: 2rem;
+      max-width: 25ch;
+      font-weight: 700;
       text-transform: uppercase;
 
       @media (min-width: 30em) {
-        line-height: 1.7;
-        font-size: 2rem;
+        font-size: 2.25rem;
       }
     }
 
-    h1,
-    p {
-      padding: 1rem;
-      padding-left: 0;
-    }
+    // h1,
+    // p {
+    //   padding: 1rem;
+    //   padding-left: 0;
+    // }
 
     p {
       font-size: 1.125rem;
+      max-width: 25ch;
+      margin-right: auto;
+      padding-block: 0.5rem;
     }
   }
 
@@ -57,6 +56,7 @@
     display: flex;
     gap: 0.75rem;
     margin-block: 1rem;
+    padding-block: 1rem;
 
     > a {
       display: flex;
