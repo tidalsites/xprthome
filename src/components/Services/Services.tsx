@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { FC, useContext, useEffect } from "react";
 import "./Services.scss";
 
 // Icons
@@ -15,6 +15,82 @@ import { LangContext } from "../../state/context/Lang";
 
 export const Services: FC = () => {
   const { lang } = useContext(LangContext);
+
+  useEffect(() => {
+    // Only apply on desktop
+    if (window.innerWidth >= 16 * 50) {
+      // Get the top position of each service image
+      const serviceImages = document.querySelectorAll(".Service__img");
+      const serviceText = document.querySelectorAll(".Service__text__wrapper");
+
+      // Array.from(serviceImages).map(
+      //   (el) => (el.style.transform = "translateX(0)")
+      // );
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          Array.from(serviceImages).map((el, i) => {
+            const top = el.offsetTop;
+            const height = el.offsetHeight;
+            const offset = height / 4;
+            const navbarHeight = 106;
+
+            if (window.scrollY >= top - navbarHeight - height + offset) {
+              el.style.transform = "translateX(0px)";
+            }
+
+            if (
+              el.style.transform === "translateX(0px)" &&
+              window.scrollY <= top - navbarHeight - height + offset
+            ) {
+              switch (i) {
+                case 0:
+                  el.style.transform = "translate(100%)";
+                  break;
+                case 1:
+                  el.style.transform = "translate(-100%)";
+                  break;
+                case 2:
+                  el.style.transform = "translate(100%)";
+                  break;
+                case 3:
+                  el.style.transform = "translate(100%)";
+                  break;
+                case 4:
+                  el.style.transform = "translate(-100%)";
+                  break;
+                case 5:
+                  el.style.transform = "translate(100%)";
+                  break;
+                default:
+                  break;
+              }
+            }
+          });
+
+          Array.from(serviceText).map((el) => {
+            const top = el.offsetTop;
+            const height = el.offsetHeight;
+            const offset = height / 4;
+            const navbarHeight = 106;
+
+            if (window.scrollY >= top - navbarHeight - height + offset) {
+              el.style.opacity = "1";
+            }
+
+            if (
+              el.style.opacity === "1" &&
+              window.scrollY <= top - navbarHeight - height + offset
+            ) {
+              el.style.opacity = "0";
+            }
+          });
+        },
+        { passive: true }
+      );
+    }
+  }, []);
   return (
     <div id="Services" className="Services link-target">
       <div className="Service link-target" id="Electrical">
