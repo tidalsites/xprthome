@@ -21,46 +21,53 @@ export const Services: FC = () => {
     if (window.innerWidth >= 16 * 50) {
       // Get the top position of each service image
       const serviceImages = document.querySelectorAll(".Service__img");
+      const serviceImageArray = Array.from(serviceImages);
       const serviceText = document.querySelectorAll(".Service__text__wrapper");
-
-      // Array.from(serviceImages).map(
-      //   (el) => (el.style.transform = "translateX(0)")
-      // );
 
       window.addEventListener(
         "scroll",
         () => {
-          Array.from(serviceImages).map((el, i) => {
+          serviceImageArray.forEach((el, i) => {
+            // @ts-ignore
             const top = el.offsetTop;
+            // @ts-ignore
             const height = el.offsetHeight;
             const offset = height / 4;
             const navbarHeight = 106;
 
             if (window.scrollY >= top - navbarHeight - height + offset) {
+              // @ts-ignore
               el.style.transform = "translateX(0px)";
             }
 
             if (
+              // @ts-ignore
               el.style.transform === "translateX(0px)" &&
               window.scrollY <= top - navbarHeight - height + offset
             ) {
               switch (i) {
                 case 0:
+                  // @ts-ignore
                   el.style.transform = "translate(100%)";
                   break;
                 case 1:
+                  // @ts-ignore
                   el.style.transform = "translate(-100%)";
                   break;
                 case 2:
+                  // @ts-ignore
                   el.style.transform = "translate(100%)";
                   break;
                 case 3:
+                  // @ts-ignore
                   el.style.transform = "translate(100%)";
                   break;
                 case 4:
+                  // @ts-ignore
                   el.style.transform = "translate(-100%)";
                   break;
                 case 5:
+                  // @ts-ignore
                   el.style.transform = "translate(100%)";
                   break;
                 default:
@@ -70,19 +77,24 @@ export const Services: FC = () => {
           });
 
           Array.from(serviceText).map((el) => {
+            // @ts-ignore
             const top = el.offsetTop;
+            // @ts-ignore
             const height = el.offsetHeight;
             const offset = height / 4;
             const navbarHeight = 106;
 
             if (window.scrollY >= top - navbarHeight - height + offset) {
+              // @ts-ignore
               el.style.opacity = "1";
             }
 
             if (
+              // @ts-ignore
               el.style.opacity === "1" &&
               window.scrollY <= top - navbarHeight - height + offset
             ) {
+              // @ts-ignore
               el.style.opacity = "0";
             }
           });
