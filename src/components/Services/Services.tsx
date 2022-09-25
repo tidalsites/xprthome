@@ -18,15 +18,16 @@ export const Services: FC = () => {
 
   useEffect(() => {
     // Only apply on desktop
-    if (window.innerWidth >= 16 * 50) {
-      // Get the top position of each service image
-      const serviceImages = document.querySelectorAll(".Service__img");
-      const serviceImageArray = Array.from(serviceImages);
-      const serviceText = document.querySelectorAll(".Service__text__wrapper");
 
-      window.addEventListener(
-        "scroll",
-        () => {
+    // Get the top position of each service image
+    const serviceImages = document.querySelectorAll(".Service__img");
+    const serviceImageArray = Array.from(serviceImages);
+    const serviceText = document.querySelectorAll(".Service__text__wrapper");
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (window.innerWidth >= 16 * 50) {
           serviceImageArray.forEach((el, i) => {
             // @ts-ignore
             const top = el.offsetTop;
@@ -34,8 +35,9 @@ export const Services: FC = () => {
             const height = el.offsetHeight;
             const offset = height / 4;
             const navbarHeight = 106;
+            const scrollPoint = top - navbarHeight - height + offset;
 
-            if (window.scrollY >= top - navbarHeight - height + offset) {
+            if (window.scrollY >= scrollPoint) {
               // @ts-ignore
               el.style.transform = "translateX(0px)";
             }
@@ -43,7 +45,7 @@ export const Services: FC = () => {
             if (
               // @ts-ignore
               el.style.transform === "translateX(0px)" &&
-              window.scrollY <= top - navbarHeight - height + offset
+              window.scrollY <= scrollPoint
             ) {
               switch (i) {
                 case 0:
@@ -75,33 +77,60 @@ export const Services: FC = () => {
               }
             }
           });
+        }
 
-          Array.from(serviceText).map((el) => {
-            // @ts-ignore
-            const top = el.offsetTop;
-            // @ts-ignore
-            const height = el.offsetHeight;
-            const offset = height / 4;
-            const navbarHeight = 106;
+        Array.from(serviceText).map((el) => {
+          // @ts-ignore
+          const top = el.offsetTop;
+          // @ts-ignore
+          const height = el.offsetHeight;
+          const offset = 16 * 4;
+          const navbarHeight = 106;
+          const scrollPoint = top - navbarHeight - height - offset;
 
-            if (window.scrollY >= top - navbarHeight - height + offset) {
+          // Desktop
+          if (window.innerWidth >= 16 * 50) {
+            if (window.scrollY >= scrollPoint) {
               // @ts-ignore
               el.style.opacity = "1";
+              // @ts-ignore
+              el.style.transform = "translateY(0)";
             }
 
             if (
               // @ts-ignore
               el.style.opacity === "1" &&
-              window.scrollY <= top - navbarHeight - height + offset
+              window.scrollY <= scrollPoint
             ) {
               // @ts-ignore
               el.style.opacity = "0";
+              // @ts-ignore
+              el.style.transform = "translateY(100%)";
             }
-          });
-        },
-        { passive: true }
-      );
-    }
+          } else {
+            // Mobile
+            if (window.scrollY >= scrollPoint) {
+              // @ts-ignore
+              el.style.opacity = "1";
+              // @ts-ignore
+              el.style.transform = "translateY(0)";
+            }
+
+            if (
+              // @ts-ignore
+              el.style.opacity === "1" &&
+              window.scrollY <= scrollPoint
+            ) {
+              // @ts-ignore
+              el.style.opacity = "0";
+              // @ts-ignore
+              el.style.transform = "translateY(100%)";
+            }
+          }
+        });
+      },
+      { passive: true }
+    );
   }, []);
   return (
     <div id="Services" className="Services link-target">
