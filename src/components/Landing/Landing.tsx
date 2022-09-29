@@ -20,11 +20,15 @@ export const Landing: FC = () => {
           </p>
         </div>
         <div className="Landing__cta">
-          <a href="mailto:info@xprthome.com">
+          <a href="mailto:admin@xprthome.com" target="_blank">
             <EmailIcon />
             <span>Email</span>
           </a>
-          <a href="https://wa.me/18098836636" className="btn-primary">
+          <a
+            href="https://wa.me/18294185876"
+            target="_blank"
+            className="btn-primary"
+          >
             <WhatsAppIcon />
             <span>{lang == "en" ? "Contact Us" : "Contáctanos"}</span>
           </a>

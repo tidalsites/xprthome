@@ -11,7 +11,7 @@
 - [x] Whatsapp integration
 - [x] Switch from MUI CDN to library
 - [x] Add service sub-menu to navbar
-- [ ] Modify service section photos
+- [x] Modify service section photos
 - [x] Optimize photos
 - [x] Update CTA section
 - [x] Setup PWA

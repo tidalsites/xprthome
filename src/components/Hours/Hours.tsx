@@ -19,7 +19,7 @@ export const Hours: FC = () => {
           <p>
             {lang == "en"
               ? "Please note that we operate 24/7; However, any services provide outside of Core Hours will incur an additional charge"
-              : "Tenga en cuenta que operamos 24/7; Sin embargo, cualquier servicio proporcionado fuera del horario principal incurrirá en un cargo adicional"}
+              : "Tenga en cuenta que operamos 24/7; Sin embargo, cualquier servicio proporcionado fuera del horario principal incurrirá un cargo adicional"}
           </p>
         </div>
       </div>

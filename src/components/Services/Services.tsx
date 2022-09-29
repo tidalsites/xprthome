@@ -6,11 +6,12 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 // Images
 import welding from "../../assets/welding-min.jpg";
-import auto from "../../assets/auto-min.jpg";
+// import auto from "../../assets/auto-min.jpg";
 import general from "../../assets/general-min.jpg";
 import plumbing from "../../assets/plumbing-min.jpg";
 import electrical from "../../assets/electrical-min.jpg";
-import ac from "../../assets/ac-min.jpg";
+import ac from "../../assets/aire-min.jpg";
+import property from "../../assets/property-min.jpg";
 import { LangContext } from "../../state/context/Lang";
 
 export const Services: FC = () => {
@@ -134,6 +135,7 @@ export const Services: FC = () => {
   }, []);
   return (
     <div id="Services" className="Services link-target">
+      {/* Electrical */}
       <div className="Service link-target" id="Electrical">
         <div className="Service__img">
           <img
@@ -171,6 +173,7 @@ export const Services: FC = () => {
           </div>
         </div>
       </div>
+      {/* Plumbing */}
       <div className="Service link-target" id="Plumbing">
         <div className="Service__img">
           <img src={plumbing} alt="Nice Bathroom" />
@@ -196,38 +199,61 @@ export const Services: FC = () => {
               </li>
               <li>
                 {lang === "es"
-                  ? "Reparaciones o cambio de inodoros cambio de lava mano soluciones de tubería tapada"
-                  : "Repairs or change of toilets change of handwashing solutions of clogged pipes"}
+                  ? "Reparaciones o cambio de inodoros"
+                  : "Repairs or change of toilets"}
               </li>
+              <li>{lang === "es" ? "Cambio de lava mano" : "Change sink"}</li>
               <li>
                 {lang === "es"
                   ? "Soluciones de tubería tapada"
                   : "Solutions of clogged pipes"}
               </li>
+              <li>
+                {lang === "es"
+                  ? "Servicios de plomería generales"
+                  : "General plumbing services"}
+              </li>
             </ul>
           </div>
         </div>
       </div>
+      {/* General */}
       <div className="Service link-target" id="General">
         <div className="Service__img">
           <img src={general} alt="Man drilling a piece of wood" />
         </div>
         <div className="Service__text">
           <div className="Service__text__wrapper">
-            <h2>Servicios Generales</h2>
+            <h2>
+              {lang === "es" ? "Servicios Generales" : "General Services"}
+            </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
-              deserunt laboriosam minima odit possimus error omnis, doloremque
-              et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur
-              facilis placeat veniam ratione facere.
+              {lang === "es"
+                ? "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor deserunt laboriosam minima odit possimus error omnis, doloremque et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur facilis placeat veniam ratione facere."
+                : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor deserunt laboriosam minima odit possimus error omnis, doloremque et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur facilis placeat veniam ratione facere."}
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              esse nostrum maxime natus, pariatur quod?
-            </p>
+            <ul>
+              <li>
+                {lang === "es"
+                  ? "Asistencia tecnologica"
+                  : "Technological assistance"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Asistencia de jardineria"
+                  : "Garden assistance"}
+              </li>
+              {/* Not ready for this yet */}
+              {/* <li>
+                {lang === "es"
+                  ? "Asistencia legal (futuro)"
+                  : "Legal assistance"}
+              </li> */}
+            </ul>
           </div>
         </div>
       </div>
+      {/* CTA */}
       <div className="Services__cta">
         <div className="Services__cta__icons">
           <span className="material-icons">plumbing</span>
@@ -240,11 +266,12 @@ export const Services: FC = () => {
             ? "¿Necesita un servicio que no está en la lista? Llama ahora para saber si podemos ayudarte. Nuestro personal tiene experiencia en muchas áreas y estará encantado de ayudarle."
             : "Do you need a service that is not on the list? Call now to find out if we can help you. Our staff have experience in many areas and will be happy to help you."}
         </p>
-        <a href="https://wa.me/18098836636">
+        <a href="https://wa.me/18294185876" target="_blank">
           <WhatsAppIcon />
           <span>{lang == "es" ? "Contáctanos" : "Contact Us"}</span>
         </a>
       </div>
+      {/* Welding */}
       <div className="Service link-target" id="Welding">
         <div className="Service__img">
           <img src={welding} alt="Man welding with sparks" />
@@ -279,6 +306,7 @@ export const Services: FC = () => {
           </div>
         </div>
       </div>
+      {/* Air Conditioning */}
       <div className="Service link-target" id="AC">
         <div className="Service__img">
           <img src={ac} alt="Man fixing AC unit" />
@@ -313,7 +341,44 @@ export const Services: FC = () => {
           </div>
         </div>
       </div>
-      <div className="Service link-target" id="Auto">
+      <div className="Service link-target" id="Property">
+        <div className="Service__img">
+          <img src={property} alt="Aerial view of property complex" />
+        </div>
+        <div className="Service__text">
+          <div className="Service__text__wrapper">
+            <h2>
+              {lang === "es"
+                ? "Asistencia co-propiedades"
+                : "Assistance for co-properties"}
+            </h2>
+            <p>
+              {lang === "es"
+                ? "Somos un apoyo eficaz y fundamental para el funcionamiento y orden de sus copropiedades, ofrecemos servicios de mantenimiento, asesorías legales, servicios de emergencias, auxiliares de aseo"
+                : "We are an effective and fundamental support for the operation and order of your co-properties, we offer maintenance services, legal advice, emergency services, cleaning assistants"}
+            </p>
+            <ul>
+              <li>
+                {lang === "es"
+                  ? "Reparamos aire acondicionados"
+                  : "We repair air conditioners"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Vendemos e instalamos aire acondicionados"
+                  : "We sell and install air conditioners"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Mantenimiento de aire acondicionado"
+                  : "Air conditioning maintenance"}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* Auto -- Will add later */}
+      {/* <div className="Service link-target" id="Auto">
         <div className="Service__img">
           <img src={auto} alt="Man tuning car engine" />
         </div>
@@ -332,7 +397,7 @@ export const Services: FC = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

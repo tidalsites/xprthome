@@ -14,13 +14,13 @@ export const Footer: FC = () => {
             <span className="Footer__main__col-header">
               {lang == "es" ? "Contacto" : "Contact"}
             </span>
-            <a href="https://wa.me/18098836636">
+            <a href="https://wa.me/18294185876" target="_blank">
               <WhatsAppIcon />
-              <span>+1 (809) 883-6636</span>
+              <span>+1 (829) 418-5876</span>
             </a>
-            <a href="mailto:info@xprthome.com">
+            <a href="mailto:admin@xprthome.com" target="_blank">
               <EmailIcon />
-              <span>info@xprthome.com</span>
+              <span>admin@xprthome.com</span>
             </a>
           </div>
           <div className="Footer__main__col">

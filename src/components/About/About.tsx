@@ -17,7 +17,7 @@ export const About: FC = () => {
       <div className="About__text">
         <h2>{lang == "en" ? "About Us" : "Nosotros"}</h2>
         <div className="About__vision">
-          <h3>{lang == "en" ? "Vision & Motion" : "Visión y Moción"}</h3>
+          <h3>{lang == "en" ? "Vision & Mission" : "Visión y Misión"}</h3>
           <p>
             {lang == "en"
               ? "To be the reference company for all Maintenance, Repair and Improvement Services and Solutions for your home and vehicle."
