@@ -20,21 +20,19 @@
     border-radius: 0.25rem;
     color: c.$white;
     width: fit-content;
+    max-width: 50em;
     margin-inline: auto;
     height: max-content;
+    margin-top: -20vh;
   }
 
   &__text {
     h1 {
-      font-size: 1.75rem;
-      max-width: 25ch;
+      font-size: clamp(1.75rem, 8vw, 2.25rem);
+      max-width: 18ch;
       font-weight: 700;
       text-transform: uppercase;
       transition: font-size 250ms ease-in;
-
-      @media (min-width: 30em) {
-        font-size: 2.25rem;
-      }
     }
 
     p {
@@ -66,7 +64,6 @@
       color: c.$black;
 
       > svg {
-        // display: none;
         width: 0;
         visibility: hidden;
         transition: all 250ms ease-in-out;
@@ -84,7 +81,6 @@
 
       @media (min-width: 25em) {
         > svg {
-          // display: block;
           width: 24px;
           visibility: visible;
         }
