@@ -24,7 +24,7 @@ export const LangToggle: FC<ILangToggleProps> = ({ alt }) => {
         alt ? "language-toggle language-toggle-alt" : "language-toggle"
       }
     >
-      <span>EN</span>
+      <span>English</span>
       <button
         className="language-toggle__btn"
         onClick={() => setChecked(!checked)}
@@ -32,7 +32,7 @@ export const LangToggle: FC<ILangToggleProps> = ({ alt }) => {
       >
         {checked ? <ToggleOnIcon /> : <ToggleOffIcon />}
       </button>
-      <span>ES</span>
+      <span>Español</span>
     </div>
   );
 };

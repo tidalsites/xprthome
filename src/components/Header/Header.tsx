@@ -42,7 +42,6 @@ export const Header: FC = () => {
     <header className={`Header ${scrollY >= 30 ? "Header-alt" : ""}`}>
       <div className="Header__wrapper">
         <div className="Header__top">
-          <LangToggle alt={scrollY >= 30} />
           <a
             className="Header__top__whatsapp"
             href="https://wa.me/18294185876"
@@ -51,6 +50,7 @@ export const Header: FC = () => {
             <WhatsAppIcon />
             <span>+1 (829) 418-5876</span>
           </a>
+          <LangToggle alt={scrollY >= 30} />
         </div>
         <div className="Header__main">
           <a href="#" className="Header__logo-container" aria-label="Home">

@@ -15,24 +15,24 @@ export const About: FC = () => {
       </div>
 
       <div className="About__text">
-        <h2>{lang == "en" ? "About Us" : "Nosotros"}</h2>
+        <h2>{lang == "es" ? "Nosotros" : "About Us"}</h2>
         <div className="About__vision">
-          <h3>{lang == "en" ? "Vision & Mission" : "Visión y Misión"}</h3>
+          <h3>{lang == "es" ? "Visión y Misión" : "Vision & Mission"}</h3>
           <p>
-            {lang == "en"
-              ? "To be the reference company for all Maintenance, Repair and Improvement Services and Solutions for your home and vehicle."
-              : "Ser la empresa referente a todos Servicios y Soluciones de mantenimiento, reparación y mejora para su hogar y vehículo."}
+            {lang == "es"
+              ? "Ser la empresa referente a todos servicios de mantenimiento, reparación y mejora para su hogar."
+              : "To be the reference company for all maintenance, repair and improvement services for your home."}
           </p>
         </div>
         <p>
-          {lang == "en"
-            ? "Our goal is to provide home services performed by a team of technicians, engineers and professional craftsmen."
-            : "Nuestra meta es proveerles servicios a domicilios realizados por un equipo de técnicos, ingenieros y artesanales profesionales."}
+          {lang == "es"
+            ? "Nuestra meta es proveerles servicios a domicilios realizados por un equipo de técnicos, ingenieros y artesanales profesionales."
+            : "Our goal is to provide home services performed by a team of technicians, engineers and professional craftsmen."}
         </p>
         <p>
-          {lang == "en"
-            ? "It is not enough for us to provide good service. Our vision is to make the application process as easy as clicking a button. With ease, responsibility and a cooperative spirit we will become the best ally for each of our clients."
-            : "No nos basta con dar un buen servicio. Nuestra visión es hacer el proceso de solicitud tan fácil como darle a un botón. Con facilidad, responsabilidad y espíritu cooperativo nos convertiremos en el mejor aliado para cada uno de nuestros clientes."}
+          {lang == "es"
+            ? "No nos basta con dar un buen servicio. Nuestra visión es hacer el proceso de solicitud tan fácil como tocar un botón. Con facilidad, responsabilidad y espíritu cooperativo seremos en el mejor aliado para cada uno de nuestros clientes."
+            : "It is not enough for us to provide a good service. Our vision is to make requesting any service as easy as clicking a button. With ease, responsibility and a cooperative spirit we will become the best ally for each of our clients."}
         </p>
       </div>
     </section>

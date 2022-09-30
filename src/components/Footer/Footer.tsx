@@ -35,7 +35,7 @@ export const Footer: FC = () => {
           </div>
           <div className="Footer__main__col Footer__main__col-hours">
             <span className="Footer__main__col-header">
-              {lang == "es" ? "Nuestros Horarios" : "Core Working Hours"}
+              {lang == "es" ? "Horario Principal" : "Core Hours"}
             </span>
             <ul>
               <li>

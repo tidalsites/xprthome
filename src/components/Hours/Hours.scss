@@ -3,6 +3,8 @@
 .Hours {
   background-color: c.$black;
   color: c.$white;
+  outline: 2px solid c.$white;
+  outline-offset: -0.5rem;
 
   &__wrapper {
     display: flex;
@@ -13,34 +15,102 @@
     padding-block: 1rem;
   }
 
+  h2 {
+    margin: 1rem;
+    border-bottom: 2px solid c.$primary;
+    width: max-content;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    max-width: 100%;
+  }
+
   &__main {
     width: 100%;
-
-    h2 {
-      margin: 1rem;
-      border-bottom: 2px solid c.$primary;
-      width: max-content;
-      margin-inline: auto;
-      padding-inline: 1rem;
-      padding-block: 0.5rem;
-      max-width: 100%;
-    }
+    max-width: 70ch;
 
     p {
-      background-color: c.$white;
-      color: c.$black;
+      padding: 1rem;
+
       text-align: center;
-      padding: 1rem 0.5rem;
-      font-size: 1.125rem;
+      max-width: 50ch;
+      margin-inline: auto;
+
+      &:nth-child(1) {
+        position: relative;
+        isolation: isolate;
+        z-index: 1;
+        text-transform: uppercase;
+        margin-inline: 0.5rem;
+        font-size: clamp(1.25rem, 5vw, 1.5rem);
+        font-weight: bold;
+
+        span {
+          background-color: c.$black;
+          padding-inline: 1rem;
+        }
+
+        @media (min-width: 22em) {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            height: 1px;
+            background-color: white;
+            z-index: -1;
+            margin-inline: auto;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        font-size: 1rem;
+      }
+    }
+
+    > a {
+      background-color: white;
+      color: c.$black;
+      width: max-content;
+      padding: 0.5rem 1.25rem;
+      margin-top: 1rem;
+      border: none;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+      transition: all 250ms ease-in-out;
+      outline: 2px solid white;
+      margin: 1rem auto;
+
+      &:hover,
+      &:focus {
+        outline-offset: 2px;
+      }
     }
   }
 
-  &__secondary {
-    p {
-      margin-block: 1rem;
-      padding: 1rem 0.5rem;
-      font-weight: bold;
+  &__primary {
+    width: min(100%, 70ch);
+    padding: 0.5rem 1rem;
+    background-color: c.$white;
+    color: c.$black;
+
+    h3 {
       text-align: center;
+      padding: 0.5rem;
+      margin: 1rem auto;
+      border-bottom: 2px solid c.$primary;
+      width: fit-content;
+    }
+
+    p {
+      padding: 0.25rem 0.5rem;
+      font-size: 1.125rem;
     }
   }
 }

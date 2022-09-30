@@ -7,7 +7,6 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 // Images
 import welding from "../../assets/welding-min.jpg";
 // import auto from "../../assets/auto-min.jpg";
-import general from "../../assets/general-min.jpg";
 import plumbing from "../../assets/plumbing-min.jpg";
 import electrical from "../../assets/electrical-min.jpg";
 import ac from "../../assets/aire-min.jpg";
@@ -48,35 +47,49 @@ export const Services: FC = () => {
               el.style.transform === "translateX(0px)" &&
               window.scrollY <= scrollPoint
             ) {
-              switch (i) {
-                case 0:
-                  // @ts-ignore
-                  el.style.transform = "translate(100%)";
-                  break;
-                case 1:
-                  // @ts-ignore
-                  el.style.transform = "translate(-100%)";
-                  break;
-                case 2:
-                  // @ts-ignore
-                  el.style.transform = "translate(100%)";
-                  break;
-                case 3:
-                  // @ts-ignore
-                  el.style.transform = "translate(100%)";
-                  break;
-                case 4:
-                  // @ts-ignore
-                  el.style.transform = "translate(-100%)";
-                  break;
-                case 5:
-                  // @ts-ignore
-                  el.style.transform = "translate(100%)";
-                  break;
-                default:
-                  break;
+              if (i % 2 == 0) {
+                // @ts-ignore
+                el.style.transform = "translateX(100%)";
+              } else {
+                // @ts-ignore
+                el.style.transform = "translateX(-100%)";
               }
             }
+
+            // if (
+            //   // @ts-ignore
+            //   el.style.transform === "translateX(0px)" &&
+            //   window.scrollY <= scrollPoint
+            // ) {
+            //   switch (i) {
+            //     case 0:
+            //       // @ts-ignore
+            //       el.style.transform = "translate(100%)";
+            //       break;
+            //     case 1:
+            //       // @ts-ignore
+            //       el.style.transform = "translate(-100%)";
+            //       break;
+            //     case 2:
+            //       // @ts-ignore
+            //       el.style.transform = "translate(100%)";
+            //       break;
+            //     case 3:
+            //       // @ts-ignore
+            //       el.style.transform = "translate(100%)";
+            //       break;
+            //     case 4:
+            //       // @ts-ignore
+            //       el.style.transform = "translate(-100%)";
+            //       break;
+            //     case 5:
+            //       // @ts-ignore
+            //       el.style.transform = "translate(100%)";
+            //       break;
+            //     default:
+            //       break;
+            //   }
+            // }
           });
         }
 
@@ -134,7 +147,49 @@ export const Services: FC = () => {
     );
   }, []);
   return (
-    <div id="Services" className="Services link-target">
+    <section id="Services" className="Services link-target">
+      {/* Co-property */}
+      <div className="Service link-target" id="Property">
+        <div className="Service__img">
+          <img src={property} alt="Aerial view of property complex" />
+        </div>
+        <div className="Service__text">
+          <div className="Service__text__wrapper">
+            <h2>
+              {lang === "es"
+                ? "Asistencia co-propiedades"
+                : "Assistance for co-properties"}
+            </h2>
+            <p>
+              {lang === "es"
+                ? "Somos un apoyo eficaz y fundamental para el funcionamiento y orden de sus copropiedades o alquileres a corto plazo al estilo AirBnb."
+                : "We are an effective and fundamental support for the operation and order of your co-properties or AirBnb-style short-term rentals."}
+            </p>
+            <ul>
+              <li>
+                {lang === "es"
+                  ? "Servicios de mantenimiento"
+                  : "Maintenance services"}
+              </li>
+              <li>
+                {lang === "es" ? "Asesorías legales" : "Legal assistance"}
+              </li>
+              <li>{lang === "es" ? "Auxiliares de aseo" : "House washing"}</li>
+              <li>
+                {lang === "es"
+                  ? "Asistencia tecnologica"
+                  : "Technological assistance"}
+              </li>
+              <li>
+                {lang === "es"
+                  ? "Asistencia de jardineria"
+                  : "Garden assistance"}
+              </li>
+              <li>{lang === "es" ? "Asistencia legal" : "Legal assistance"}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
       {/* Electrical */}
       <div className="Service link-target" id="Electrical">
         <div className="Service__img">
@@ -217,60 +272,7 @@ export const Services: FC = () => {
           </div>
         </div>
       </div>
-      {/* General */}
-      <div className="Service link-target" id="General">
-        <div className="Service__img">
-          <img src={general} alt="Man drilling a piece of wood" />
-        </div>
-        <div className="Service__text">
-          <div className="Service__text__wrapper">
-            <h2>
-              {lang === "es" ? "Servicios Generales" : "General Services"}
-            </h2>
-            <p>
-              {lang === "es"
-                ? "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor deserunt laboriosam minima odit possimus error omnis, doloremque et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur facilis placeat veniam ratione facere."
-                : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor deserunt laboriosam minima odit possimus error omnis, doloremque et ratione, expedita voluptatum nesciunt ipsam! Neque aspernatur facilis placeat veniam ratione facere."}
-            </p>
-            <ul>
-              <li>
-                {lang === "es"
-                  ? "Asistencia tecnologica"
-                  : "Technological assistance"}
-              </li>
-              <li>
-                {lang === "es"
-                  ? "Asistencia de jardineria"
-                  : "Garden assistance"}
-              </li>
-              {/* Not ready for this yet */}
-              {/* <li>
-                {lang === "es"
-                  ? "Asistencia legal (futuro)"
-                  : "Legal assistance"}
-              </li> */}
-            </ul>
-          </div>
-        </div>
-      </div>
-      {/* CTA */}
-      <div className="Services__cta">
-        <div className="Services__cta__icons">
-          <span className="material-icons">plumbing</span>
-          <span className="material-icons">carpenter</span>
-          <span className="material-icons">handyman</span>
-          <span className="material-icons">roofing</span>
-        </div>
-        <p>
-          {lang == "es"
-            ? "¿Necesita un servicio que no está en la lista? Llama ahora para saber si podemos ayudarte. Nuestro personal tiene experiencia en muchas áreas y estará encantado de ayudarle."
-            : "Do you need a service that is not on the list? Call now to find out if we can help you. Our staff have experience in many areas and will be happy to help you."}
-        </p>
-        <a href="https://wa.me/18294185876" target="_blank">
-          <WhatsAppIcon />
-          <span>{lang == "es" ? "Contáctanos" : "Contact Us"}</span>
-        </a>
-      </div>
+
       {/* Welding */}
       <div className="Service link-target" id="Welding">
         <div className="Service__img">
@@ -318,55 +320,19 @@ export const Services: FC = () => {
             </h2>
             <p>
               {lang === "es"
-                ? "Nos encargamos de dejar tu espacio frio"
-                : "We take care of leaving your cold space"}
+                ? "Nos encargamos de dejar tu espacio frio."
+                : "We take care of leaving your space cold."}
             </p>
             <ul>
               <li>
                 {lang === "es"
                   ? "Reparamos aire acondicionados"
-                  : "We repair air conditioners"}
+                  : "Air conditioner repairs"}
               </li>
               <li>
                 {lang === "es"
                   ? "Vendemos e instalamos aire acondicionados"
-                  : "We sell and install air conditioners"}
-              </li>
-              <li>
-                {lang === "es"
-                  ? "Mantenimiento de aire acondicionado"
-                  : "Air conditioning maintenance"}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="Service link-target" id="Property">
-        <div className="Service__img">
-          <img src={property} alt="Aerial view of property complex" />
-        </div>
-        <div className="Service__text">
-          <div className="Service__text__wrapper">
-            <h2>
-              {lang === "es"
-                ? "Asistencia co-propiedades"
-                : "Assistance for co-properties"}
-            </h2>
-            <p>
-              {lang === "es"
-                ? "Somos un apoyo eficaz y fundamental para el funcionamiento y orden de sus copropiedades, ofrecemos servicios de mantenimiento, asesorías legales, servicios de emergencias, auxiliares de aseo"
-                : "We are an effective and fundamental support for the operation and order of your co-properties, we offer maintenance services, legal advice, emergency services, cleaning assistants"}
-            </p>
-            <ul>
-              <li>
-                {lang === "es"
-                  ? "Reparamos aire acondicionados"
-                  : "We repair air conditioners"}
-              </li>
-              <li>
-                {lang === "es"
-                  ? "Vendemos e instalamos aire acondicionados"
-                  : "We sell and install air conditioners"}
+                  : "Sale and installation of air conditioners"}
               </li>
               <li>
                 {lang === "es"
@@ -398,6 +364,24 @@ export const Services: FC = () => {
           </div>
         </div>
       </div> */}
-    </div>
+      {/* CTA */}
+      <div className="Services__cta">
+        <div className="Services__cta__icons">
+          <span className="material-icons">plumbing</span>
+          <span className="material-icons">carpenter</span>
+          <span className="material-icons">handyman</span>
+          <span className="material-icons">roofing</span>
+        </div>
+        <p>
+          {lang == "es"
+            ? "¿Necesita un servicio que no está listado? Contactenos ahora para saber si podemos ayudarle. Nuestro personal tiene experiencia en muchas áreas y estará encantado de ayudarle."
+            : "Do you need a service that is not on the list? Call now to find out if we can help you. Our staff have experience in many areas and will be happy to help you."}
+        </p>
+        {/* <a href="https://wa.me/18294185876" target="_blank">
+          <WhatsAppIcon />
+          <span>{lang == "es" ? "Contáctanos" : "Contact Us"}</span>
+        </a> */}
+      </div>
+    </section>
   );
 };

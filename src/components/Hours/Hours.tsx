@@ -8,20 +8,32 @@ export const Hours: FC = () => {
     <div id="Hours" className="Hours link-target">
       <div className="Hours__wrapper">
         <div className="Hours__main">
-          <h2>{lang == "en" ? "Hours of Operation" : "Nuestros Horarios"}</h2>
+          {/* <h2>{lang == "es" ? "Nuestros Horarios" : "Hours of Operation"}</h2> */}
           <p>
-            {lang == "en"
-              ? "Monday to Saturday - 6AM to 9PM"
-              : "Lunes a Sábado de 6AM a 9PM"}
+            <span>
+              {lang == "es" ? "Nosotros operamos 24/7!" : "We operate 24/7!"}
+            </span>
           </p>
-        </div>
-        <div className="Hours__secondary">
           <p>
-            {lang == "en"
-              ? "Please note that we operate 24/7; However, any services provide outside of Core Hours will incur an additional charge"
-              : "Tenga en cuenta que operamos 24/7; Sin embargo, cualquier servicio proporcionado fuera del horario principal incurrirá un cargo adicional"}
+            {lang == "es"
+              ? "Tenga en cuenta que operamos 24/7; Sin embargo, cualquier servicio proporcionado fuera del horario principal incurrirá un cargo adicional"
+              : "Please note that we operate 24/7; However, any services provide outside of Core Hours will incur an additional charge"}
           </p>
+          <a href="#Footer">
+            {lang === "es" ? "Ver horas primarias" : "View primary hours"}
+          </a>
         </div>
+        {/* <div className="Hours__primary">
+          <h3>{lang == "es" ? "Horas Primarias" : "Primary Hours"}</h3>
+          <p>
+            {lang == "es"
+              ? "Lunes a Viernes de 7AM a 9PM"
+              : "Monday to Friday - 7AM to 9PM"}
+          </p>
+          <p>
+            {lang == "es" ? "Sabado de 7AM a 12PM" : "Saturday - 7AM to 12PM"}
+          </p>
+        </div> */}
       </div>
     </div>
   );
