@@ -7,8 +7,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "s3-cleanup": "aws s3 rm s3://xprthome-staging/assets --recursive",
-    "deploy": "aws s3 sync dist/ s3://xprthome-staging"
+    "s3-cleanup-staging": "aws s3 rm s3://xprthome-staging/assets --recursive",
+    "s3-cleanup-prod": "aws s3 rm s3://xprthome.com/assets --recursive",
+    "deploy-staging": "aws s3 sync dist/ s3://xprthome-staging",
+    "deploy-prod": "aws s3 sync dist/ s3://xprthome.com"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
