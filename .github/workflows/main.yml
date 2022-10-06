@@ -43,4 +43,4 @@ jobs:
       # - name: S3 Cleanup
       #   run: npm run s3-cleanup
       - name: Deploy
-        run: npm run deploy
+        run: npm run deploy-prod
