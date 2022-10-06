@@ -6,10 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches:
-      - "release/v**"
-    tags:
-      - v*.**
+    branches: [main]
+  pull_request:
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -43,4 +42,4 @@ jobs:
       # - name: S3 Cleanup
       #   run: npm run s3-cleanup
       - name: Deploy
-        run: npm run deploy
+        run: npm run deploy-staging
