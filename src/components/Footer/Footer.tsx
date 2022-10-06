@@ -2,6 +2,7 @@ import { FC, useContext } from "react";
 import "./Footer.scss";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import { LangContext } from "../../state/context/Lang";
 
 export const Footer: FC = () => {
@@ -22,6 +23,13 @@ export const Footer: FC = () => {
               <EmailIcon />
               <span>admin@xprthome.com</span>
             </a>
+            <a
+              href="https://www.instagram.com/expertohomepuntacana/"
+              target="_blank"
+            >
+              <InstagramIcon />
+              <span>Instagram</span>
+            </a>
           </div>
           <div className="Footer__main__col">
             <span className="Footer__main__col-header">
@@ -40,27 +48,27 @@ export const Footer: FC = () => {
             <ul>
               <li>
                 <span>{lang === "es" ? "Lunes" : "Monday"}</span>
-                <span>6AM - 9PM</span>
+                <span>7AM - 9PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Martes" : "Tuesday"}</span>
-                <span>6AM - 9PM</span>
+                <span>7AM - 9PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Miércoles" : "Wednesday"}</span>
-                <span>6AM - 9PM</span>
+                <span>7AM - 9PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Jueves" : "Thursday"}</span>
-                <span>6AM - 9PM</span>
+                <span>7AM - 9PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Viernes" : "Friday"}</span>
-                <span>6AM - 9PM</span>
+                <span>7AM - 9PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Sábado" : "Saturday"}</span>
-                <span>6AM -9PM</span>
+                <span>7AM -12PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Domingo" : "Sunday"}</span>

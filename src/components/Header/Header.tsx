@@ -59,56 +59,49 @@ export const Header: FC = () => {
           <nav id="primary_navigation">
             <ul className="Header__list">
               <li>
-                <a href="#About">{lang === "en" ? "About Us" : "Nosotros"}</a>
+                <a href="#About">{lang === "es" ? "Nosotros" : "About Us"}</a>
               </li>
               <li>
-                <a href="#Hours">{lang === "en" ? "Hours" : "Horas"}</a>
+                <a href="#Hours">{lang === "es" ? "Horas" : "Hours"}</a>
               </li>
               <li className="Header__list__dropdown">
                 <a href="#Services">
-                  {lang === "en" ? "Services" : "Servicios"}
+                  {lang === "es" ? "Servicios" : "Services"}
                 </a>
                 <ArrowDropDownRoundedIcon />
                 <div className="Header__list__dropdown__menu">
                   <div className="Header__list__dropdown__menu__top"></div>
                   <ul>
                     <li>
+                      <a href="#Property">
+                        {lang === "es" ? "Co-Propiedades" : "Co-Properties"}
+                      </a>
+                    </li>
+                    <li>
                       <a href="#Electrical">
-                        {lang === "en" ? "Electrical" : "Electricidad"}
+                        {lang === "es" ? "Electricidad" : "Electrical"}
                       </a>
                     </li>
                     <li>
                       <a href="#Plumbing">
-                        {lang === "en" ? "Plumbing" : "Plumeria"}
+                        {lang === "es" ? "Plumeria" : "Plumbing"}
                       </a>
                     </li>
                     <li>
                       <a href="#Welding">
-                        {lang === "en" ? "Welding" : "Herreria"}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#General">
-                        {lang === "en" ? "General" : "General"}
+                        {lang === "es" ? "Herreria" : "Welding"}
                       </a>
                     </li>
                     <li>
                       <a href="#AC">
-                        {lang === "en" ? "Air Conditioning" : "Aire"}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#Auto">
-                        {lang === "en"
-                          ? "Roadside Assistance"
-                          : "Assistencia Vial"}
+                        {lang === "es" ? "Aire" : "Air Conditioning"}
                       </a>
                     </li>
                   </ul>
                 </div>
               </li>
               <li>
-                <a href="#Footer">{lang === "en" ? "Contact" : "Contacto"}</a>
+                <a href="#Footer">{lang === "es" ? "Contacto" : "Contact"}</a>
               </li>
             </ul>
           </nav>
