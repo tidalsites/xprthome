@@ -25,7 +25,7 @@ export const MobileMenu: FC<IMobileMenuProps> = ({ setMobileMenu }) => {
       <div className="MobileMenu__wrapper">
         <div className="MobileMenu__close">
           <LangToggle alt={true} />
-          <button onClick={closeMenu}>
+          <button aria-label="Close mobile menu" onClick={closeMenu}>
             <CloseIcon />
           </button>
         </div>

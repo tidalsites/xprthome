@@ -106,7 +106,10 @@ export const Header: FC = () => {
             </ul>
           </nav>
           <div className="Header__menu">
-            <button onClick={() => setMobileMenu(true)}>
+            <button
+              aria-label="Open mobile menu"
+              onClick={() => setMobileMenu(true)}
+            >
               <MenuIcon />
             </button>
           </div>
