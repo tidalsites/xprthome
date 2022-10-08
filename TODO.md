@@ -16,3 +16,4 @@
 - [x] Update CTA section
 - [x] Setup PWA
 - [x] Update contact info
+- [x] Switch to AWS Amplify
