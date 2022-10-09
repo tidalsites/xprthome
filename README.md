@@ -8,17 +8,29 @@ This project is a simple website for a handyman service company located in Domin
 2. **Install Packages** `npm i`
 3. **Start app** `npm run dev`
 
-## Deploy
+## Deploy - Staging
 
-1. Merge or commit changes to main
-2. Push changes to Github <-- This will automatically deploy to AWS via AWS Amplify
+After pushing changes to main branch, Github Actions will trigger a deployment to S3.
+
+1. `git add .`
+2. `git commit -m <commit_message>`
+3. `git push`
+
+## Deploy - Production
+
+AWS Amplify CI pipeline will be triggered when a new tag is pushed to repository.
+
+1. `git tag -a <tag_number> -m <tag_message>`
+2. `git push origin <tag_number>`
 
 ## Tech stack
 
 - **FrontEnd Framework:** React w/ Typescript
 - **CSS:** Sass with BEM
 - **Build Tool:** Vite
-- **CI/CD Pipeline:** AWS Amplify
+- **CI/CD Pipeline (staging):** Github Actions
+- **CI/CD Pipeline (production):** AWS Amplify
+- **Staging Environment:** AWS S3 static hosting
 - **Deployment Environment:** AWS Amplify
 
 ## Color Palette

@@ -10,7 +10,7 @@
     "s3-cleanup-staging": "aws s3 rm s3://expertohome-staging/assets --recursive",
     "s3-cleanup-prod": "aws s3 rm s3://expertohome.com/assets --recursive",
     "deploy-staging": "aws s3 sync dist/ s3://expertohome-staging",
-    "deploy-prod": "./amplify.sh"
+    "deploy-prod": "aws s3 sync dist/ s3://expertohome.com"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
