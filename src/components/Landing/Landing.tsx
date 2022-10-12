@@ -25,7 +25,7 @@ export const Landing: FC = () => {
             <span>Email</span>
           </a>
           <a
-            href="https://wa.me/18294185876"
+            href="https://wa.me/18295135209"
             target="_blank"
             className="btn-primary"
           >

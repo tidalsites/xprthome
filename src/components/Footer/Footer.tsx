@@ -15,9 +15,9 @@ export const Footer: FC = () => {
             <span className="Footer__main__col-header">
               {lang == "es" ? "Contacto" : "Contact"}
             </span>
-            <a href="https://wa.me/18294185876" target="_blank">
+            <a href="https://wa.me/18295135209" target="_blank">
               <WhatsAppIcon />
-              <span>+1 (829) 418-5876</span>
+              <span>+1 (829) 513-5209</span>
             </a>
             <a href="mailto:admin@xprthome.com" target="_blank">
               <EmailIcon />
@@ -78,7 +78,7 @@ export const Footer: FC = () => {
           </div>
         </div>
         <div className="Footer__copyright">
-          <span>&copy; XPRT Home 2022</span>
+          <span>&copy; Experto Home 2022</span>
           <a href="https://www.tidalsites.com">
             {lang == "es" ? "Creado por TidalSites" : "Powered by TidalSites"}
           </a>

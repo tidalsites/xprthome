@@ -377,10 +377,6 @@ export const Services: FC = () => {
             ? "¿Necesita un servicio que no está listado? Contactenos ahora para saber si podemos ayudarle. Nuestro personal tiene experiencia en muchas áreas y estará encantado de ayudarle."
             : "Do you need a service that is not on the list? Call now to find out if we can help you. Our staff have experience in many areas and will be happy to help you."}
         </p>
-        {/* <a href="https://wa.me/18294185876" target="_blank">
-          <WhatsAppIcon />
-          <span>{lang == "es" ? "Contáctanos" : "Contact Us"}</span>
-        </a> */}
       </div>
     </section>
   );
